@@ -4,10 +4,11 @@
 "   Pathogen - Tim Pope
 "   Pydiction - Ryan Kulla
 "   Pyflakes - Phil Frost
-"   pythoncomplete - Aaron Griffin
-"   surround.vim - Tim Pope
-"   repeat.vim - Tim Pope
 "   git runtime files - Tim Pope
+"   pythoncomplete - Aaron Griffin
+"   repeat.vim - Tim Pope
+"   surround.vim - Tim Pope
+"   fugitive.vim - Tim Pope
 
 " TODO: shortcuts for set tw=72 and set tw=0
 " TODO: searching, excluding comments
@@ -15,9 +16,9 @@
 
 set nocompatible " Not vi compatibile (affects other settings)
 filetype off 
+call pathogen#infect() " TODO: which are needed to be called each time?
+call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
-call pathogen#infect()
-"call pathogen#runtime_append_all_bundles()
 
 filetype plugin indent on " 'on': Enables filetype detection
                           " 'plugin': Enables file-specific plugins
