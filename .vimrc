@@ -1,16 +1,15 @@
-" Last updated: 2011-07-19
+" Last updated: 2011-08-18
 "
 " Plugins:
 "   Pathogen - Tim Pope
 "   Pydiction - Ryan Kulla
 "   Pyflakes - Phil Frost
-"   git runtime files - Tim Pope
+"   vim-git - Tim Pope
 "   pythoncomplete - Aaron Griffin
 "   repeat.vim - Tim Pope
 "   surround.vim - Tim Pope
 "   fugitive.vim - Tim Pope
 
-" TODO: shortcuts for set tw=72 and set tw=0
 " TODO: searching, excluding comments
 " TODO: automatically set tw=72 when typing function headers
 
@@ -84,7 +83,15 @@ set smartcase  " character is upper-case, it's case sensitive
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Make Y yank to end of line (consistent with D and C)
-"nnoremap Y y$
+nnoremap Y y$
+
+" Shortcuts to adjust textwidth
+imap <F7> <C-o>:set textwidth=72<CR>
+map <F7> :set textwidth=72<CR>
+imap <F8> <C-o>:set textwidth=80<CR>
+map <F8> :set textwidth=80<CR>
+imap <F9> <C-o>:set textwidth=0<CR>
+map <F9> :set textwidth=0<CR>
 
 " Quick write
 map <leader>w :w!<CR>
@@ -111,12 +118,12 @@ set pastetoggle=<F3> " Deactivates tabbing behavior to paste reasonably
 cmap w!! w !sudo tee % >/dev/null 
 
 " Append the time and date 
-:map <F6> a<C-R>=strftime("%c")<CR><Esc>
-imap <F6> <C-R>=strftime("%c")<CR><Esc>
+:map <F11> a<C-R>=strftime("%c")<CR><Esc>
+imap <F11> <C-R>=strftime("%c")<CR><Esc>
 
 " Append time and date, in ISO 8601 format
-:map <F7> a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
-imap <F7> <C-R>=strftime("%Y-%m-%d")<CR><Esc>
+:map <F12> a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
+imap <F12> <C-R>=strftime("%Y-%m-%d")<CR><Esc>
 
 " Make comma behave as semicolon in normal mode
 "nnoremap , ;
