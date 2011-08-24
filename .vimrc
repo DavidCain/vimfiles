@@ -14,11 +14,10 @@
 " TODO: automatically set tw=72 when typing function headers
 
 set nocompatible " Not vi compatibile (affects other settings)
-filetype off 
-call pathogen#infect() " TODO: which are needed to be called each time?
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 
+" Pathogen startup
+filetype off 
+call pathogen#infect()
 filetype plugin indent on " 'on': Enables filetype detection
                           " 'plugin': Enables file-specific plugins
                           " 'indent': Indent files
