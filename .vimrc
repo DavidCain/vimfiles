@@ -1,10 +1,9 @@
-" Last updated: 2011-08-18
-"
+" Last updated: 2011-08-29
+
 " Plugins:
 "   Pathogen - Tim Pope
 "   Pydiction - Ryan Kulla
-"   Pyflakes - Phil Frost
-"   vim-git - Tim Pope
+"   Pyflakes - Kevin Watters
 "   pythoncomplete - Aaron Griffin
 "   repeat.vim - Tim Pope
 "   surround.vim - Tim Pope
