@@ -36,6 +36,7 @@ set nowrap " No line wrapping
 set title " Set the terminal's title
 set autoread " Automatically read file again if it's been changed elsewhere
 set splitright " Vertical splits open to the right
+set splitbelow " Horizonal splits open to the bottom
 "set tildeop " Use the tilde an an operator (can be used with motions)
 
 
@@ -140,6 +141,7 @@ map <Down> 4<C-e>
 map <Up> 4<C-y>
 map <Left> 4zh
 map <Right> 4zl
+
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
