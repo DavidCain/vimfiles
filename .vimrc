@@ -1,6 +1,7 @@
-" Last updated: 2011-08-29
+" Last updated: 2011-11-05
 
 " Plugins:
+"   Gundo - Steve Losh
 "   Pathogen - Tim Pope
 "   Pydiction - Ryan Kulla
 "   Pyflakes - Kevin Watters
@@ -83,6 +84,10 @@ set smartcase  " character is upper-case, it's case sensitive
 
 " Make Y yank to end of line (consistent with D and C)
 nnoremap Y y$
+
+" Change high/low start/end of line (g_ works like $, across modes)
+map H ^
+map L g_
 
 " Shortcuts to adjust textwidth
 imap <F7> <C-o>:set textwidth=72<CR>

@@ -9,6 +9,7 @@ pulled from its github repository as a submodule.
 
 Managed plugins:
 
+* [Gundo](http://sjl.bitbucket.org/gundo.vim) - Steve Losh
 * [Pathogen](https://github.com/tpope/vim-pathogen) - Tim Pope
 * [Pydiction](https://github.com/vim-scripts/Pydiction) - Ryan Kulla
 * [Pyflakes](https://github.com/kevinw/pyflakes-vim) - Kevin Watters
@@ -26,7 +27,7 @@ Complete installation instructions can be found in the VimCast
 pathogen."](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
 
 In short, you'll want to make a directory ~/.vim, and initialize a new
-repository. Install pathogen, then add a git submodule for each
+repository. Install Pathogen, then add a git submodule for each
 plugin you wish to manage: `git submodule add <url> bundle/name`
 
 Add the submodules to the staging area, and commit. To update all
