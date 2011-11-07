@@ -82,6 +82,20 @@ set smartcase  " character is upper-case, it's case sensitive
 " Remappings
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Easily move lines of text
+nnoremap <A-j> :m+<CR>==
+nnoremap <A-k> :m-2<CR>==
+nnoremap <A-h> <<
+nnoremap <A-l> >>
+inoremap <A-j> <Esc>:m+<CR>==gi
+inoremap <A-k> <Esc>:m-2<CR>==gi
+inoremap <A-h> <Esc><<`]a
+inoremap <A-l> <Esc>>>`]a
+vnoremap <A-j> :m'>+<CR>gv=gv
+vnoremap <A-k> :m-2<CR>gv=gv
+vnoremap <A-h> <gv
+vnoremap <A-l> >gv
+
 " Make Y yank to end of line (consistent with D and C)
 nnoremap Y y$
 
@@ -164,6 +178,7 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme zenburn " custom color scheme.
 if has("gui_running")
     set guifont=Monospace\ 10
     set columns=84
