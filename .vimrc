@@ -180,6 +180,12 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 """""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme zenburn " custom color scheme.
 if has("gui_running")
+    set winaltkeys=no " Disable alt-keys (doesn't interfere with Alt bindings)
+    set guioptions-=m " Disable the menu
+    set guioptions-=T " Disable the toolbar
+    set guioptions-=l " Disable left scrollbar
+    set guioptions-=r " Disable right scrollbar
+
     set guifont=Monospace\ 10
     set columns=84
     "set lines=999 " (Problematic on resourcing- put this into .gvimrc)
