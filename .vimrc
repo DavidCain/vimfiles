@@ -1,4 +1,4 @@
-" Last updated: 2011-11-07
+" Last updated: 2012-02-14
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -81,6 +81,9 @@ set smartcase  " character is upper-case, it's case sensitive
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Remappings
 """""""""""""""""""""""""""""""""""""""""""""""""""
+
+" map control-backspace to delete the previous word
+:imap <C-BS> <C-W>
 
 " Easily move lines of text
 nnoremap <A-j> :m+<CR>==
@@ -178,7 +181,7 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme zenburn " custom color scheme.
+set background=dark
 if has("gui_running")
     set winaltkeys=no " Disable alt-keys (doesn't interfere with Alt bindings)
     set guioptions-=m " Disable the menu
@@ -189,7 +192,6 @@ if has("gui_running")
     set guifont=Monospace\ 10
     set columns=84
     "set lines=999 " (Problematic on resourcing- put this into .gvimrc)
-    set background=dark
     colorscheme zenburn " custom color scheme.
                         " Download at http://slinky.imukuppi.org/zenburnpage/
 endif
