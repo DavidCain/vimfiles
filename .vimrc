@@ -128,7 +128,7 @@ map <C-l> <C-w>l
 nnoremap zm :set lines=999<CR>
 
 " Make small (lazy xUbuntu fix)
-nnoremap zs :set lines=38<CR>
+nnoremap zs :set lines=42<CR>
 
 " Toggle line numbers and fold column for easy copying:
 imap <silent> <F2> <Esc>:set nonumber!<CR>:set foldcolumn=0<CR>a
