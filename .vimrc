@@ -125,7 +125,8 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Maximize height of given window
-nnoremap zm :set lines=999<CR>
+" (While 999 is supposed to be "max" it's often interpreted literally)
+" nnoremap zm :set lines=999<CR>
 
 " Make small (lazy xUbuntu fix)
 nnoremap zs :set lines=42<CR>
