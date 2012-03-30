@@ -1,4 +1,4 @@
-" Last updated: 2012-02-14
+" Last updated: 2012-03-29
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -38,7 +38,8 @@ set title " Set the terminal's title
 set autoread " Automatically read file again if it's been changed elsewhere
 set splitright " Vertical splits open to the right
 set splitbelow " Horizonal splits open to the bottom
-"set tildeop " Use the tilde an an operator (can be used with motions)
+"set tildeop " Use the tilde as an operator (can be used with motions)
+set nojoinspaces " Only insert one space after sentences in join operations
 
 
 """ Tabbing
