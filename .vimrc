@@ -57,7 +57,7 @@ set nobackup " Don't make backup files
 set noswapfile " Don't make .swp files
 set undofile " Enable undofiles (store edit history for file)
              " (Does not work in Vim 7.0)
-"set undodir=~/.vim/unodir " Store undofiles
+"set undodir=~/.vim/undofiles " Store undofiles
 
 """ Wild menu
 set wildmenu
