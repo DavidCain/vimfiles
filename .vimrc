@@ -103,6 +103,10 @@ vnoremap <A-l> >gv
 " Make Y yank to end of line (consistent with D and C)
 nnoremap Y y$
 
+" Delete text to the blackhole register
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
 " Change high/low start/end of line (g_ works like $, across modes)
 map H ^
 map L g_
