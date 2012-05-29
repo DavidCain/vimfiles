@@ -1,4 +1,4 @@
-" Last updated: 2012-03-29
+" Last updated: 2012-05-29
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -103,10 +103,6 @@ vnoremap <A-l> >gv
 " Make Y yank to end of line (consistent with D and C)
 nnoremap Y y$
 
-" Delete text to the blackhole register
-nnoremap <leader>d "_d
-vnoremap <leader>d "_d
-
 " Change high/low start/end of line (g_ works like $, across modes)
 map H ^
 map L g_
@@ -118,10 +114,6 @@ imap <F8> <C-o>:set textwidth=80<CR>
 map <F8> :set textwidth=80<CR>
 imap <F9> <C-o>:set textwidth=0<CR>
 map <F9> :set textwidth=0<CR>
-
-" Quick write
-map <leader>w :w!<CR>
-map <leader>q :q!<CR>
 
 " Simpler window navigation 
 map <C-h> <C-w>h
@@ -169,6 +161,17 @@ map <Down> 4<C-e>
 map <Up> 4<C-y>
 map <Left> 4zh
 map <Right> 4zl
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Leader mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Delete text to the blackhole register
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" Quick write
+map <leader>w :w!<CR>
+map <leader>q :q!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
