@@ -1,4 +1,4 @@
-" Last updated: 2012-05-29
+" Last updated: 2012-05-30
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -171,7 +171,6 @@ vnoremap <leader>d "_d
 
 " Quick write
 map <leader>w :w!<CR>
-map <leader>q :q!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
