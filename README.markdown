@@ -9,16 +9,16 @@ pulled from its github repository as a submodule.
 
 Managed plugins:
 
-* [Gundo](http://sjl.bitbucket.org/gundo.vim) - Steve Losh
-* [Pathogen](https://github.com/tpope/vim-pathogen) - Tim Pope
-* [pythoncomplete](https://github.com/vim-scripts/pythoncomplete) - Aaron Griffin
-* [repeat.vim](https://github.com/tpope/vim-repeat) - Tim Pope
-* [surround.vim](https://github.com/tpope/vim-surround) - Tim Pope
-* [fugitive.vim](https://github.com/tpope/vim-fugitive) - Tim Pope
+* [Gundo][gundo] - Steve Losh
+* [Pathogen][pathogen] - Tim Pope
+* [pythoncomplete][pythoncomplete] - Aaron Griffin
+* [python-mode][python-mode] - Kirill Klenov
+* [repeat.vim][repeat.vim] - Tim Pope
+* [surround.vim][surround.vim] - Tim Pope
+* [fugitive.vim][fugitive.vim] - Tim Pope
 
 
-Installation
-------------
+## Installation
 
 Complete installation instructions can be found in the VimCast 
 ["Synchronizing plugins with git submodules and
@@ -53,3 +53,10 @@ controlled, and easily used across multiple machines!
 
 
 [vimcast]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+[gundo]: http://sjl.bitbucket.org/gundo.vim 
+[pathogen]: https://github.com/tpope/vim-pathogen 
+[pythoncomplete]: https://github.com/vim-scripts/pythoncomplete 
+[python-mode]: https://github.com/klen/python-mode
+[repeat.vim]: https://github.com/tpope/vim-repeat 
+[surround.vim]: https://github.com/tpope/vim-surround 
+[fugitive.vim]: https://github.com/tpope/vim-fugitive 
