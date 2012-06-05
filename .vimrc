@@ -16,6 +16,8 @@ set nocompatible " Not vi compatibile (affects other settings)
 
 " Pathogen startup
 filetype off 
+" Stored as a submodule, so tell Vim to autoload it
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 filetype plugin indent on " 'on': Enables filetype detection
                           " 'plugin': Enables file-specific plugins
