@@ -11,8 +11,6 @@ Managed plugins:
 
 * [Gundo](http://sjl.bitbucket.org/gundo.vim) - Steve Losh
 * [Pathogen](https://github.com/tpope/vim-pathogen) - Tim Pope
-* [Pydiction](https://github.com/vim-scripts/Pydiction) - Ryan Kulla
-* [Pyflakes](https://github.com/kevinw/pyflakes-vim) - Kevin Watters
 * [pythoncomplete](https://github.com/vim-scripts/pythoncomplete) - Aaron Griffin
 * [repeat.vim](https://github.com/tpope/vim-repeat) - Tim Pope
 * [surround.vim](https://github.com/tpope/vim-surround) - Tim Pope

@@ -1,10 +1,8 @@
-" Last updated: 2012-05-30
+" Last updated: 2012-06-05
 
 " Plugins:
 "   Gundo - Steve Losh
 "   Pathogen - Tim Pope
-"   Pydiction - Ryan Kulla
-"   Pyflakes - Kevin Watters
 "   pythoncomplete - Aaron Griffin
 "   repeat.vim - Tim Pope
 "   surround.vim - Tim Pope
