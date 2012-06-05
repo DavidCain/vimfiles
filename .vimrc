@@ -4,6 +4,7 @@
 "   Gundo - Steve Losh
 "   Pathogen - Tim Pope
 "   pythoncomplete - Aaron Griffin
+"   python-mode - Kirill Klenov
 "   repeat.vim - Tim Pope
 "   surround.vim - Tim Pope
 "   fugitive.vim - Tim Pope
@@ -220,3 +221,12 @@ nnoremap <F5> :so ~/.vimrc <Esc>
 set modelines=0 " Closes a small vulnerability (see options.txt)
 autocmd FileType text setlocal textwidth=80 " Limit text to 80 columns for plaintext
 " /\(#.*\)\@<!foo Search for foo, but not on commented lines
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python mode settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:pymode_lint_write = 0 " Disable pylint checking every save
+
+let g:pymode_folding = 0
