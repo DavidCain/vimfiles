@@ -16,3 +16,6 @@
 [submodule "/home/david/.vim/bundle/gundo"]
 	path = /home/david/.vim/bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = git://github.com/klen/python-mode.git
