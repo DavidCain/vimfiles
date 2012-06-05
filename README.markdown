@@ -28,22 +28,22 @@ In short, you'll want to make a directory `~/.vim`, and initialize a new
 repository. Install Pathogen, then add a git submodule for each
 plugin you wish to manage: 
 
-> git submodule add <url> bundle/name
+    git submodule add <url> bundle/name
 
 Add the submodules to the staging area, and commit. To update all
 submodules, run:
     
-> git submodule foreach git pull origin master
+    git submodule foreach git pull origin master
 
 Lastly, Move .vimrc's to .vim/ and add them to the repository. Create
 symlinks in your home directory like so:
 
-> ln -s ~/.vim/.vimrc ~/.vimrc
+    ln -s ~/.vim/.vimrc ~/.vimrc
 
 Now, all your Vim configurations are located in one place, version
 controlled, and easily used across multiple machines!
 
-## Remove a plugin/submodule
+### Remove a plugin/submodule
 
    1. Delete the relevant section from the `.gitmodules` file.
    2. Delete the relevant section from `.git/config`.
