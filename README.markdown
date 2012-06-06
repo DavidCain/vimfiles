@@ -7,23 +7,11 @@ Plugins and runtime files are managed by Tim Pope's
 [Pathogen](https://github.com/tpope/vim-pathogen). Each plugin has been
 pulled from its GitHub repository as a submodule.
 
-**Managed plugins:**
-
-* [Gundo][gundo] - Steve Losh
-* [Pathogen][pathogen] - Tim Pope
-* [pythoncomplete][pythoncomplete] - Aaron Griffin
-* [python-mode][python-mode] - Kirill Klenov
-* [repeat.vim][repeat.vim] - Tim Pope
-* [surround.vim][surround.vim] - Tim Pope
-* [fugitive.vim][fugitive.vim] - Tim Pope
-
-
 ## Installation
 
-To install my .vimrc, and all plugins, clone the repository to `~/.vim`,
-passing the recursive flag so that all plugins (stored as submodules)
-are cloned as well. Create a simlink to the `.vimrc` so Vim loads it on
-startup.
+To install my `.vimrc,` and all plugins, clone the repository to
+`~/.vim`, passing the recursive flag so that all plugins are cloned as
+well. Create a simlink to the `.vimrc` so Vim can load it on startup.
 
     git clone --recursive git://github.com/DavidCain/vimfiles.git ~/.vim
     ln -s ~/.vim/.vimrc ~/.vimrc
@@ -47,6 +35,18 @@ startup.
    2. Delete the relevant section from `.git/config`.
    3. Run `git rm --cached path_to_submodule` (no trailing slash).
    4. Commit and delete the now untracked submodule files. 
+
+
+## Managed plugins
+
+* [Gundo][gundo] - Steve Losh
+* [Pathogen][pathogen] - Tim Pope
+* [pythoncomplete][pythoncomplete] - Aaron Griffin
+* [python-mode][python-mode] - Kirill Klenov
+* [repeat.vim][repeat.vim] - Tim Pope
+* [surround.vim][surround.vim] - Tim Pope
+* [fugitive.vim][fugitive.vim] - Tim Pope
+
 
 ## References
 
