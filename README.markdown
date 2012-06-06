@@ -50,12 +50,11 @@ startup.
 
 ## References
 
-* ["Synchronizing plugins with git submodules and
-pathogen."][vimcast]
+* [Synchronizing plugins with git submodules and pathogen.][vimcast]
 * [How to remove a submodule][rm-submodule]
 
 [vimcast]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
-[rm-submodule]: http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule
+[rm-submodule]: http://stackoverflow.com/a/1260982/815632
 
 [gundo]: http://sjl.bitbucket.org/gundo.vim 
 [pathogen]: https://github.com/tpope/vim-pathogen 
