@@ -5,9 +5,9 @@ A collection of files used to customize my Vim environment.
 
 Plugins and runtime files are managed by Tim Pope's
 [Pathogen](https://github.com/tpope/vim-pathogen). Each plugin has been
-pulled from its github repository as a submodule.
+pulled from its GitHub repository as a submodule.
 
-Managed plugins:
+**Managed plugins:**
 
 * [Gundo][gundo] - Steve Losh
 * [Pathogen][pathogen] - Tim Pope
@@ -20,28 +20,26 @@ Managed plugins:
 
 ## Installation
 
-Complete installation instructions can be found in the VimCast 
-["Synchronizing plugins with git submodules and
-pathogen."][vimcast]
+To install my .vimrc, and all plugins, clone the repository to `~/.vim`,
+passing the recursive flag so that all plugins (stored as submodules)
+are cloned as well. Create a simlink to the `.vimrc` so Vim loads it on
+startup.
 
-In short, you'll want to make a directory `~/.vim`, and initialize a new
-repository. Install Pathogen, then add a git submodule for each
-plugin you wish to manage: 
-
-    git submodule add <url> bundle/name
-
-Add the submodules to the staging area, and commit. To update all
-submodules, run:
-    
-    git submodule foreach git pull origin master
-
-Lastly, Move .vimrc's to .vim/ and add them to the repository. Create
-symlinks in your home directory like so:
-
+    git clone --recursive git://github.com/DavidCain/vimfiles.git ~/.vim
     ln -s ~/.vim/.vimrc ~/.vimrc
 
-Now, all your Vim configurations are located in one place, version
-controlled, and easily used across multiple machines!
+
+## How to:
+
+### Add a new plugin
+
+    cd ~/.vim
+    git submodule add git://github.com/JohnQExample/repo.git bundle/name
+
+### Update all plugins
+    
+    cd ~/.vim
+    git submodule foreach git pull origin master
 
 ### Remove a plugin/submodule
 
@@ -50,9 +48,15 @@ controlled, and easily used across multiple machines!
    3. Run `git rm --cached path_to_submodule` (no trailing slash).
    4. Commit and delete the now untracked submodule files. 
 
+## References
 
+* ["Synchronizing plugins with git submodules and
+pathogen."][vimcast]
+* [How to remove a submodule][rm-submodule]
 
 [vimcast]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+[rm-submodule]: http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule
+
 [gundo]: http://sjl.bitbucket.org/gundo.vim 
 [pathogen]: https://github.com/tpope/vim-pathogen 
 [pythoncomplete]: https://github.com/vim-scripts/pythoncomplete 
