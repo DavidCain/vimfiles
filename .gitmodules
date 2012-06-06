@@ -13,8 +13,8 @@
 [submodule "bundle/vim-git"]
 	path = bundle/vim-git
 	url = https://github.com/tpope/vim-git
-[submodule "/home/david/.vim/bundle/gundo"]
-	path = /home/david/.vim/bundle/gundo
+[submodule "bundle/gundo"]
+	path = bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
