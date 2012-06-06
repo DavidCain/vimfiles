@@ -61,7 +61,7 @@ GitHub][vim-org-github].
 [vimcast]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 [rm-submodule]: http://stackoverflow.com/a/1260982/815632
 
-[gundo]: http://sjl.bitbucket.org/gundo.vim 
+[gundo]: https://github.com/sjl/gundo.vim/
 [pathogen]: https://github.com/tpope/vim-pathogen 
 [pythoncomplete]: https://github.com/vim-scripts/pythoncomplete 
 [python-mode]: https://github.com/klen/python-mode
