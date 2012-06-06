@@ -21,6 +21,9 @@ well. Create a simlink to the `.vimrc` so Vim can load it on startup.
 
 ### Add a new plugin
 
+Note that all plugins at [vim.org][vim-org] can be found [mirrored on
+GitHub][vim-org-github].
+
     cd ~/.vim
     git submodule add git://github.com/JohnQExample/repo.git bundle/name
 
@@ -53,6 +56,8 @@ well. Create a simlink to the `.vimrc` so Vim can load it on startup.
 * [Synchronizing plugins with git submodules and pathogen.][vimcast]
 * [How to remove a submodule][rm-submodule]
 
+[vim-org]: http://www.vim.org
+[vim-org-github]: https://github.com/vim-scripts
 [vimcast]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 [rm-submodule]: http://stackoverflow.com/a/1260982/815632
 
