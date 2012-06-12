@@ -168,7 +168,7 @@ map <Right> 4zl
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Delete text to the blackhole register
 nnoremap <leader>d "_d
-vnoremap <leader>d "_d
+vnoremap <leader>D "_D
 
 " Quick write
 map <leader>w :w!<CR>
@@ -229,6 +229,6 @@ autocmd FileType text setlocal textwidth=80 " Limit text to 80 columns for plain
 " Python mode settings
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
-let g:pymode_lint_write = 0 " Disable pylint checking every save
+let g:pymode_lint_write = 0 " pylint checking every save
 
 let g:pymode_folding = 0
