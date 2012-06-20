@@ -47,6 +47,7 @@ GitHub][vim-org-github].
 * [pythoncomplete][pythoncomplete] - Aaron Griffin
 * [python-mode][python-mode] - Kirill Klenov
 * [repeat.vim][repeat.vim] - Tim Pope
+* [vim-markdown][vim-markdown] - Tim Pope
 * [surround.vim][surround.vim] - Tim Pope
 * [fugitive.vim][fugitive.vim] - Tim Pope
 
@@ -66,5 +67,6 @@ GitHub][vim-org-github].
 [pythoncomplete]: https://github.com/vim-scripts/pythoncomplete 
 [python-mode]: https://github.com/klen/python-mode
 [repeat.vim]: https://github.com/tpope/vim-repeat 
+[vim-markdown]: https://github.com/tpope/vim-markdown
 [surround.vim]: https://github.com/tpope/vim-surround 
 [fugitive.vim]: https://github.com/tpope/vim-fugitive 
