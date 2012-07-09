@@ -11,7 +11,7 @@ pulled from its GitHub repository as a submodule.
 
 To install my `.vimrc,` and all plugins, clone the repository to
 `~/.vim`, passing the recursive flag so that all plugins are cloned as
-well. Create a simlink to the `.vimrc` so Vim can load it on startup.
+well. Create a symlink to the `.vimrc` so Vim can load it on startup.
 
     git clone --recursive git://github.com/DavidCain/vimfiles.git ~/.vim
     ln -s ~/.vim/.vimrc ~/.vimrc
