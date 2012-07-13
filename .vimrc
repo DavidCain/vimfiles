@@ -1,4 +1,4 @@
-" Last updated: 2012-06-05
+" Last updated: 2012-07-13
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -111,8 +111,8 @@ map L g_
 " Shortcuts to adjust textwidth
 imap <F7> <C-o>:set textwidth=72<CR>
 map <F7> :set textwidth=72<CR>
-imap <F8> <C-o>:set textwidth=80<CR>
-map <F8> :set textwidth=80<CR>
+imap <F8> <C-o>:set textwidth=79<CR>
+map <F8> :set textwidth=79<CR>
 imap <F9> <C-o>:set textwidth=0<CR>
 map <F9> :set textwidth=0<CR>
 
@@ -123,7 +123,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Maximize height of given window
-" (While 999 is supposed to be "max" it's often interpreted literally)
+" (While 999 is supposed to be 'max' it's often interpreted literally)
 " nnoremap zm :set lines=999<CR>
 
 " Make small (lazy xUbuntu fix)
