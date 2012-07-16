@@ -8,6 +8,7 @@
 "   repeat.vim - Tim Pope
 "   surround.vim - Tim Pope
 "   fugitive.vim - Tim Pope
+"   vim-markdown - Tim Pope
 
 " TODO: searching, excluding comments
 " TODO: automatically set tw=72 when typing function headers
