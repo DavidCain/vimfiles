@@ -1,4 +1,4 @@
-" Last updated: 2012-07-13
+" Last updated: 2012-07-16
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -222,8 +222,11 @@ nnoremap <F5> :so ~/.vimrc <Esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 set modelines=0 " Closes a small vulnerability (see options.txt)
-autocmd FileType text setlocal textwidth=80 " Limit text to 80 columns for plaintext
 " /\(#.*\)\@<!foo Search for foo, but not on commented lines
+
+" Automatically set textwidth for plaintext and Python source
+autocmd FileType text setlocal textwidth=72
+autocmd FileType py setlocal textwidth=79
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
