@@ -1,4 +1,4 @@
-" Last updated: 2012-07-16
+" Last updated: 2012-12-19
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -127,8 +127,8 @@ map <C-l> <C-w>l
 " (While 999 is supposed to be 'max' it's often interpreted literally)
 " nnoremap zm :set lines=999<CR>
 
-" Make small (lazy xUbuntu fix)
-nnoremap zs :set lines=42<CR>
+" Make window fill vertical space on netbook (lazy Xubuntu fix)
+nnoremap zs :set lines=42<CR>:redraw!<CR>
 
 " Toggle line numbers and fold column for easy copying:
 imap <silent> <F2> <Esc>:set nonumber!<CR>:set foldcolumn=0<CR>a
