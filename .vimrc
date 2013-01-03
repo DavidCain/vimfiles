@@ -1,4 +1,4 @@
-" Last updated: 2012-12-19
+" Last updated: 2013-01-02
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -122,13 +122,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-" Maximize height of given window
-" (While 999 is supposed to be 'max' it's often interpreted literally)
-" nnoremap zm :set lines=999<CR>
-
-" Make window fill vertical space on netbook (lazy Xubuntu fix)
-nnoremap zs :set lines=42<CR>:redraw!<CR>
 
 " Toggle line numbers and fold column for easy copying:
 imap <silent> <F2> <Esc>:set nonumber!<CR>:set foldcolumn=0<CR>a
