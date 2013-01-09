@@ -1,4 +1,4 @@
-" Last updated: 2013-01-02
+" Last updated: 2013-01-09
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -57,9 +57,14 @@ set backspace=indent,eol,start " backspace over everything in insert mode
 """ Vim files
 set nobackup " Don't make backup files
 set noswapfile " Don't make .swp files
-set undofile " Enable undofiles (store edit history for file)
-             " (Does not work in Vim 7.0)
-"set undodir=~/.vim/undofiles " Store undofiles
+
+if version >= 703
+  set undodir=~/.vim/undodir
+  set undofile " Enable undofiles (store edit history for file)
+  set undoreload=10000 "maximum lines to save for undo on a buffer reload
+endif
+set undolevels=1000 "maximum number of changes that can be undone
+
 
 """ Wild menu
 set wildmenu
