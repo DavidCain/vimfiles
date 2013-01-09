@@ -139,8 +139,7 @@ imap <F11> <C-R>=strftime("%c")<CR><Esc>
 :map <F12> a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
 imap <F12> <C-R>=strftime("%Y-%m-%d")<CR><Esc>
 
-" Make comma behave as semicolon in normal mode
-"nnoremap , ;
+nnoremap <leader>, ;
 " Make semi-colon act as colon in normal mode
 nnoremap ; :
 
