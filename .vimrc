@@ -69,7 +69,7 @@ set undolevels=1000 "maximum number of changes that can be undone
 """ Wild menu
 set wildmenu
 set wildmode=list:longest " Makes file completion behave more like bash
-"set wildignore=*.o,*,a,*.swp,*.bak,*.pyc,*.class " Ignore certain file types
+set wildignore=*.o,*.a,*.swp,*.bak,*.pyc,*.class " Ignore certain file types
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
