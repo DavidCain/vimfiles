@@ -9,6 +9,7 @@
 "   surround.vim - Tim Pope
 "   fugitive.vim - Tim Pope
 "   vim-markdown - Tim Pope
+"   vimchat - Naveed Massjouni & William Wolf
 
 " TODO: searching, excluding comments
 " TODO: automatically set tw=72 when typing function headers
@@ -184,6 +185,11 @@ let g:pydiction_location = '~/.vim/vimfiles/pydiction/complete-dict'
 " Delete blankspace at the end of python code
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 
+" Override default settings for Vimchat
+let g:vimchat_logotr = 0  " Don't log 'off the record' conversations
+let g:vimchat_buddylistwidth = 40
+let g:vimchat_statusicon = 1
+let g:vimchat_timestampformat = "[%H:%M:%S]"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI Settings

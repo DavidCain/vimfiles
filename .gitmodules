@@ -25,3 +25,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
+[submodule "bundle/vimchat"]
+	path = bundle/vimchat
+	url = git://github.com/ironcamel/vimchat.git
