@@ -237,5 +237,6 @@ autocmd FileType py setlocal textwidth=79
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:pymode_lint_write = 0 " pylint checking every save
+let g:pymode_lint_ignore = "E501" " Ignore 'line > 79 chars'
 
 let g:pymode_folding = 0
