@@ -1,4 +1,4 @@
-" Last updated: 2013-01-09
+" Last updated: 2013-09-11
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -136,6 +136,10 @@ set pastetoggle=<F3> " Deactivates tabbing behavior to paste reasonably
 
 " Use w!! to write to files where sudo status is needed
 cmap w!! w !sudo tee % >/dev/null 
+
+" Use ipdb for debugging
+:map <F10> oimport ipdb; ipdb.set_trace()<CR><Esc>
+imap <F10> import ipdb; ipdb.set_trace()<CR><Esc>
 
 " Append the time and date 
 :map <F11> a<C-R>=strftime("%c")<CR><Esc>
