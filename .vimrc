@@ -141,10 +141,6 @@ cmap w!! w !sudo tee % >/dev/null
 :map <F10> oimport ipdb; ipdb.set_trace()<CR><Esc>
 imap <F10> import ipdb; ipdb.set_trace()<CR><Esc>
 
-" Append the time and date 
-:map <F11> a<C-R>=strftime("%c")<CR><Esc>
-imap <F11> <C-R>=strftime("%c")<CR><Esc>
-
 " Append time and date, in ISO 8601 format
 :map <F12> a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
 imap <F12> <C-R>=strftime("%Y-%m-%d")<CR><Esc>
