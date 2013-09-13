@@ -139,7 +139,7 @@ cmap w!! w !sudo tee % >/dev/null
 
 " Use ipdb for debugging
 :map <F10> oimport ipdb; ipdb.set_trace()<CR><Esc>
-imap <F10> import ipdb; ipdb.set_trace()<CR><Esc>
+imap <F10> import ipdb; ipdb.set_trace()<Esc>
 
 " Append time and date, in ISO 8601 format
 :map <F12> a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
