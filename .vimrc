@@ -231,6 +231,7 @@ let g:vimchat_logotr = 0  " Don't log 'off the record' conversations
 let g:vimchat_buddylistwidth = 40
 let g:vimchat_statusicon = 1
 let g:vimchat_timestampformat = "[%H:%M:%S]"
+let g:vimchat_libnotify = 0  " Don't notify (with message text) on chats
 
 " Python mode settings
 " --------------------
