@@ -1,4 +1,4 @@
-" Last updated: 2013-09-11
+" Last updated: 2013-09-26
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -173,25 +173,6 @@ vnoremap <leader>D "_D
 map <leader>w :w!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Python auto-complete
-" Download from: http://www.vim.org/scripts/script.php?script_id=850
-let g:pydiction_location = '~/.vim/vimfiles/pydiction/complete-dict'
-" Plugin 'pythoncomplete' works with this as well
-" Download from: http://www.vim.org/scripts/script.php?script_id=1542
-
-" Delete blankspace at the end of python code
-autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
-
-" Override default settings for Vimchat
-let g:vimchat_logotr = 0  " Don't log 'off the record' conversations
-let g:vimchat_buddylistwidth = 40
-let g:vimchat_statusicon = 1
-let g:vimchat_timestampformat = "[%H:%M:%S]"
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
@@ -219,7 +200,6 @@ autocmd! bufwritepost .vimrc source %
 " Resource .vimrc (useful in other instances of Vim)
 nnoremap <F5> :so ~/.vimrc <Esc>
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""
@@ -231,12 +211,29 @@ set modelines=0 " Closes a small vulnerability (see options.txt)
 autocmd FileType text setlocal textwidth=72
 autocmd FileType py setlocal textwidth=79
 
+" Delete blankspace at the end of python code
+autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Python auto-complete
+" --------------------
+" Download from: http://www.vim.org/scripts/script.php?script_id=850
+let g:pydiction_location = '~/.vim/vimfiles/pydiction/complete-dict'
+" Plugin 'pythoncomplete' works with this as well
+" Download from: http://www.vim.org/scripts/script.php?script_id=1542
+
+" Vimchat
+" --------------------
+let g:vimchat_logotr = 0  " Don't log 'off the record' conversations
+let g:vimchat_buddylistwidth = 40
+let g:vimchat_statusicon = 1
+let g:vimchat_timestampformat = "[%H:%M:%S]"
+
 " Python mode settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" --------------------
 let g:pymode_lint_write = 0 " pylint checking every save
 let g:pymode_lint_ignore = "E501" " Ignore 'line > 79 chars'
-
 let g:pymode_folding = 0
