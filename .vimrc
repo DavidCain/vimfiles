@@ -1,4 +1,4 @@
-" Last updated: 2013-09-26
+" Last updated: 2013-10-08
 
 " Plugins:
 "   Gundo - Steve Losh
@@ -110,10 +110,6 @@ vnoremap <A-l> >gv
 
 " Make Y yank to end of line (consistent with D and C)
 nnoremap Y y$
-
-" Change high/low start/end of line (g_ works like $, across modes)
-map H ^
-map L g_
 
 " Shortcuts to adjust textwidth
 imap <F7> <C-o>:set textwidth=72<CR>
