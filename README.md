@@ -50,7 +50,6 @@ GitHub][vim-org-github].
 * [vim-markdown][vim-markdown] - Tim Pope
 * [surround.vim][surround.vim] - Tim Pope
 * [fugitive.vim][fugitive.vim] - Tim Pope
-* [vimchat][vimchat] - Naveed Massjouni & William Wolf
 
 
 ## References
@@ -71,4 +70,3 @@ GitHub][vim-org-github].
 [vim-markdown]: https://github.com/tpope/vim-markdown
 [surround.vim]: https://github.com/tpope/vim-surround 
 [fugitive.vim]: https://github.com/tpope/vim-fugitive 
-[vimchat]: https://github.com/ironcamel/vimchat
