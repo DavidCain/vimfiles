@@ -42,14 +42,21 @@ GitHub][vim-org-github].
 
 ## Managed plugins
 
-* [Gundo][gundo] - Steve Losh
-* [Pathogen][pathogen] - Tim Pope
-* [pythoncomplete][pythoncomplete] - Aaron Griffin
-* [python-mode][python-mode] - Kirill Klenov
-* [repeat.vim][repeat.vim] - Tim Pope
-* [vim-markdown][vim-markdown] - Tim Pope
-* [surround.vim][surround.vim] - Tim Pope
-* [fugitive.vim][fugitive.vim] - Tim Pope
+- General
+    * [Gundo][gundo] - Steve Losh
+    * [Pathogen][pathogen] - Tim Pope
+    * [markdown.vim][markdown.vim] - Tim Pope
+    * [surround.vim][surround.vim] - Tim Pope
+    * [repeat.vim][repeat.vim] - Tim Pope
+    * [fugitive.vim][fugitive.vim] - Tim Pope
+- Python-specific
+    * [pythoncomplete][pythoncomplete] - Aaron Griffin
+    * [python-mode][python-mode] - Kirill Klenov
+- Ruby-specific
+    * [rails.vim][rails.vim] - Tim Pope
+    * [bundler.vim][bundler.vim] - Tim Pope
+- Other
+    * [vim-coffee-script][vim-coffee-script] - Mick Koch
 
 
 ## References
@@ -67,6 +74,9 @@ GitHub][vim-org-github].
 [pythoncomplete]: https://github.com/vim-scripts/pythoncomplete 
 [python-mode]: https://github.com/klen/python-mode
 [repeat.vim]: https://github.com/tpope/vim-repeat 
-[vim-markdown]: https://github.com/tpope/vim-markdown
+[markdown.vim]: https://github.com/tpope/vim-markdown
 [surround.vim]: https://github.com/tpope/vim-surround 
 [fugitive.vim]: https://github.com/tpope/vim-fugitive 
+[rails.vim]: https://github.com/tpope/vim-rails 
+[bundler.vim]: https://github.com/tpope/vim-bundler
+[vim-coffee-script]: https://github.com/kchmck/vim-coffee-script
