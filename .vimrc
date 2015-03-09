@@ -1,5 +1,3 @@
-" Last updated: 2013-10-08
-
 " Plugins:
 "   Gundo - Steve Losh
 "   Pathogen - Tim Pope
@@ -50,6 +48,7 @@ set nojoinspaces " Only insert one space after sentences in join operations
 """ Tabbing
 set tabstop=4 " Sets tabs to 4 spaces
 set shiftwidth=4 " < and > keys indent/unindent 4 spaces
+autocmd FileType html,jade,coffee,ruby setlocal shiftwidth=2 tabstop=2
 set shiftround  " use multiple of shiftwidth when indenting with '<' and '>'
 set smarttab " Use 'shiftwidth' setting at start of lines
 set expandtab " Inserts four spaces with the tab key
