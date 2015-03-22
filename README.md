@@ -16,6 +16,10 @@ well. Create a symlink to the `.vimrc` so Vim can load it on startup.
     git clone --recursive git://github.com/DavidCain/vimfiles.git ~/.vim
     ln -s ~/.vim/.vimrc ~/.vimrc
 
+If you cloned, but forgot the `--recursive`, you can run:
+
+    git submodule update --init
+
 
 ## How to:
 
