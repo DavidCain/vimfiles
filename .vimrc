@@ -174,6 +174,7 @@ map <leader>w :w!<CR>
 " GUI Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
+colorscheme jellybeans
 if has("gui_running")
     set winaltkeys=no " Disable alt-keys (doesn't interfere with Alt bindings)
     set guioptions-=m " Disable the menu
@@ -184,8 +185,6 @@ if has("gui_running")
     set guifont=Monospace\ 10
     set columns=84
     "set lines=999 " (Problematic on resourcing- put this into .gvimrc)
-    colorscheme zenburn " custom color scheme.
-                        " Download at http://slinky.imukuppi.org/zenburnpage/
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""

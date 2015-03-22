@@ -34,3 +34,21 @@
 [submodule "bundle/bundler"]
 	path = bundle/bundler
 	url = https://github.com/tpope/vim-bundler.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-monokai"]
+	path = bundle/vim-monokai
+	url = https://github.com/sickill/vim-monokai
+[submodule "bundle/vim-coffee"]
+	path = bundle/vim-coffee
+	url = https://github.com/duythinht/vim-coffee
+[submodule "bundle/vim-railscasts-theme"]
+	path = bundle/vim-railscasts-theme
+	url = https://github.com/jpo/vim-railscasts-theme
+[submodule "bundle/vim-colors-codeschool"]
+	path = bundle/vim-colors-codeschool
+	url = https://github.com/antlypls/vim-colors-codeschool
+[submodule "bundle/jellybeans"]
+	path = bundle/jellybeans
+	url = https://github.com/nanotech/jellybeans.vim
