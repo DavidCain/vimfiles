@@ -82,6 +82,7 @@ set incsearch " Search as you type
 set hlsearch  " Highlight search term in text
 set ignorecase " All lower case strings are case insensitive, but if one 
 set smartcase  " character is upper-case, it's case sensitive
+set grepprg=ack " Use ack instead of grep
 
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
