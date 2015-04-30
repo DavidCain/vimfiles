@@ -49,6 +49,7 @@ GitHub][vim-org-github].
 - General
     * [Gundo][gundo] - Steve Losh
     * [Pathogen][pathogen] - Tim Pope
+    * [abolish.vim][abolish.vim] - Tim Pope
     * [markdown.vim][markdown.vim] - Tim Pope
     * [surround.vim][surround.vim] - Tim Pope
     * [repeat.vim][repeat.vim] - Tim Pope
@@ -84,3 +85,4 @@ GitHub][vim-org-github].
 [rails.vim]: https://github.com/tpope/vim-rails 
 [bundler.vim]: https://github.com/tpope/vim-bundler
 [vim-coffee-script]: https://github.com/kchmck/vim-coffee-script
+[abolish.vim]: https://github.com/tpope/vim-abolish

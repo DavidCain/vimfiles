@@ -3,6 +3,7 @@
 "   Pathogen - Tim Pope
 "   pythoncomplete - Aaron Griffin
 "   python-mode - Kirill Klenov
+"   abolish.vim - Tim Pope
 "   repeat.vim - Tim Pope
 "   surround.vim - Tim Pope
 "   fugitive.vim - Tim Pope
