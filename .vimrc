@@ -236,3 +236,6 @@ let g:vimchat_libnotify = 0  " Don't notify (with message text) on chats
 let g:pymode_lint_write = 0 " pylint checking every save
 let g:pymode_lint_ignore = "E501" " Ignore 'line > 79 chars'
 let g:pymode_folding = 0
+
+" OS X tweaks
+autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
