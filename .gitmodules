@@ -17,12 +17,18 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround
-[submodule "bundle/gundo"]
-	path = bundle/gundo
-	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/vim-abolish"]
+	path = bundle/vim-abolish
+	url = https://github.com/tpope/vim-abolish
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/file-line"]
+	path = bundle/file-line
+	url = https://github.com/bogado/file-line
 
 # Python
 [submodule "bundle/pythoncomplete"]
@@ -56,11 +62,3 @@
 [submodule "bundle/jellybeans"]
 	path = bundle/jellybeans
 	url = https://github.com/nanotech/jellybeans.vim
-
-# Miscellaneous
-[submodule "bundle/vim-abolish"]
-	path = bundle/vim-abolish
-	url = https://github.com/tpope/vim-abolish
-[submodule "bundle/file-line"]
-	path = bundle/file-line
-	url = https://github.com/bogado/file-line
