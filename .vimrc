@@ -229,9 +229,13 @@ let g:pydiction_location = '~/.vim/vimfiles/pydiction/complete-dict'
 
 " Python mode settings
 " --------------------
-let g:pymode_lint_write = 0 " pylint checking every save
-let g:pymode_lint_ignore = "E501" " Ignore 'line > 79 chars'
+let g:pymode_lint_on_write = 1 " pylint checking every save
+" Ignore warnings about long lines, McCabe complexity, blank lines,
+" block comments, and continuation lines
+" (See http://pep8.readthedocs.org/en/latest/intro.html#error-codes)
+let g:pymode_lint_ignore = "C901,E121,E126,E265,E302,E303,E501"
 let g:pymode_folding = 0
+let g:pymode_rope = 0
 
 " OS X tweaks
 autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
