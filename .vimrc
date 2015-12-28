@@ -49,11 +49,11 @@ set nojoinspaces " Only insert one space after sentences in join operations
 """ Tabbing
 set tabstop=4 " Sets tabs to 4 spaces
 set shiftwidth=4 " < and > keys indent/unindent 4 spaces
-autocmd FileType html,jade,coffee,ruby setlocal shiftwidth=2 tabstop=2
+set softtabstop=4 " Treats four spaces as one tab
+autocmd FileType html,coffee,ruby,css,javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 set shiftround  " use multiple of shiftwidth when indenting with '<' and '>'
 set smarttab " Use 'shiftwidth' setting at start of lines
 set expandtab " Inserts four spaces with the tab key
-set softtabstop=4 " Treats four spaces as one tab
 set autoindent
 set backspace=indent,eol,start " backspace over everything in insert mode
 
