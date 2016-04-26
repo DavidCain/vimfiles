@@ -24,6 +24,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-tbone'
 
+Plug 'easymotion/vim-easymotion'
+
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
 
@@ -162,7 +164,6 @@ imap <F10> import ipdb; ipdb.set_trace()<Esc>
 :map <F12> a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
 imap <F12> <C-R>=strftime("%Y-%m-%d")<CR><Esc>
 
-nnoremap <leader>, ;
 " Make semi-colon act as colon in normal mode
 nnoremap ; :
 
@@ -183,11 +184,8 @@ map <Right> 4zl
 " Leader mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Delete text to the blackhole register
-nnoremap <leader>d "_d
-vnoremap <leader>D "_D
-
-" Quick write
-map <leader>w :w!<CR>
+nnoremap <leader><leader>d "_d
+vnoremap <leader><leader>D "_D
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI Settings
@@ -250,6 +248,9 @@ let g:pymode_lint_on_write = 1 " pylint checking every save
 let g:pymode_lint_ignore = "C901,E121,E126,E265,E302,E303,E501"
 let g:pymode_folding = 0
 let g:pymode_rope = 0
+
+" Easymotion
+map <Leader> <Plug>(easymotion-prefix)
 
 " OS X tweaks
 autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
