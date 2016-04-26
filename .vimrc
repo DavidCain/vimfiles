@@ -1,34 +1,48 @@
-" Plugins:
-"   Gundo - Steve Losh
-"   Pathogen - Tim Pope
-"   pythoncomplete - Aaron Griffin
-"   python-mode - Kirill Klenov
-"   abolish.vim - Tim Pope
-"   repeat.vim - Tim Pope
-"   surround.vim - Tim Pope
-"   fugitive.vim - Tim Pope
-"   markdown.vim - Tim Pope
-"   rails.vim - Tim Pope
-"   bundler.vim - Tim Pope
-"   vim-coffee-script - Mick Koch
-
 " TODO: searching, excluding comments
 " TODO: automatically set tw=72 when typing function headers
 
-set nocompatible " Not vi compatibile (affects other settings)
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-plug
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Pathogen startup
-filetype off 
-" Stored as a submodule, so tell Vim to autoload it
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-filetype plugin indent on " 'on': Enables filetype detection
-                          " 'plugin': Enables file-specific plugins
-                          " 'indent': Indent files
+call plug#begin('~/.vim/plugged')
+
+" Python
+Plug 'klen/python-mode', { 'for': 'python' }
+Plug 'vim-scripts/pythoncomplete', { 'for': 'python' }
+
+Plug 'bogado/file-line'
+Plug 'sjl/gundo.vim/'
+
+" TPope
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-tbone'
+
+" Colorschemes
+Plug 'nanotech/jellybeans.vim'
+
+" Add plugins to &runtimepath
+call plug#end()
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " General options
 """""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible " Not vi compatibile (affects other settings)
+
+filetype plugin indent on " 'on': Enables filetype detection
+                          " 'plugin': Enables file-specific plugins
+                          " 'indent': Indent files
 let mapleader=',' " Change the mapleader from \ to ','
 syntax on " Turns on syntax highlighting
 set ruler " Always show curent position
