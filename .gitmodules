@@ -57,3 +57,9 @@
 [submodule "bundle/jellybeans"]
 	path = bundle/jellybeans
 	url = https://github.com/nanotech/jellybeans.vim
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/vim-tbone"]
+	path = bundle/vim-tbone
+	url = https://github.com/tpope/vim-tbone.git

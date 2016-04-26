@@ -54,6 +54,8 @@ GitHub][vim-org-github].
     * [surround.vim][surround.vim] - Tim Pope
     * [repeat.vim][repeat.vim] - Tim Pope
     * [fugitive.vim][fugitive.vim] - Tim Pope
+    * [commentary.vim][commentary.vim] - Tim Pope
+    * [tbone.vim][tbone.vim] - Tim Pope
 - Python-specific
     * [pythoncomplete][pythoncomplete] - Aaron Griffin
     * [python-mode][python-mode] - Kirill Klenov
@@ -78,3 +80,5 @@ GitHub][vim-org-github].
 [surround.vim]: https://github.com/tpope/vim-surround 
 [fugitive.vim]: https://github.com/tpope/vim-fugitive 
 [abolish.vim]: https://github.com/tpope/vim-abolish
+[commentary.vim]: https://github.com/tpope/vim-commentary
+[tbone.vim]: https://github.com/tpope/vim-tbone
