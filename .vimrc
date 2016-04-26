@@ -26,6 +26,9 @@ Plug 'tpope/vim-tbone'
 
 Plug 'easymotion/vim-easymotion'
 
+" JavaScript
+Plug 'othree/javascript-libraries-syntax.vim'
+
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
 
@@ -251,6 +254,9 @@ let g:pymode_rope = 0
 
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
+
+" javascript-libraries-syntax
+let g:used_javascript_libs = 'angularjs,underscore,jquery'
 
 " OS X tweaks
 autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
