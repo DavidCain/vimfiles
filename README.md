@@ -57,11 +57,6 @@ GitHub][vim-org-github].
 - Python-specific
     * [pythoncomplete][pythoncomplete] - Aaron Griffin
     * [python-mode][python-mode] - Kirill Klenov
-- Ruby-specific
-    * [rails.vim][rails.vim] - Tim Pope
-    * [bundler.vim][bundler.vim] - Tim Pope
-- Other
-    * [vim-coffee-script][vim-coffee-script] - Mick Koch
 
 
 ## References
@@ -82,7 +77,4 @@ GitHub][vim-org-github].
 [markdown.vim]: https://github.com/tpope/vim-markdown
 [surround.vim]: https://github.com/tpope/vim-surround 
 [fugitive.vim]: https://github.com/tpope/vim-fugitive 
-[rails.vim]: https://github.com/tpope/vim-rails 
-[bundler.vim]: https://github.com/tpope/vim-bundler
-[vim-coffee-script]: https://github.com/kchmck/vim-coffee-script
 [abolish.vim]: https://github.com/tpope/vim-abolish

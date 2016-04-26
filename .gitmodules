@@ -38,11 +38,6 @@
 	path = bundle/python-mode
 	url = https://github.com/klen/python-mode
 
-# CoffeeScript
-[submodule "bundle/vim-coffee-script"]
-	path = bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script
-
 # Color schemes
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
