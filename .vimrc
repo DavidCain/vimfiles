@@ -14,12 +14,15 @@ Plug 'vim-scripts/pythoncomplete', { 'for': 'python' }
 Plug 'bogado/file-line'
 Plug 'sjl/gundo.vim/'
 
-" TPope
+" Markdown
+Plug 'tpope/vim-markdown'
+Plug 'suan/vim-instant-markdown'
+
+" Miscellaneous TPope
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
-Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-tbone'
@@ -254,6 +257,10 @@ let g:pymode_rope = 0
 
 " Easymotion
 map <Leader> <Plug>(easymotion-prefix)
+
+" Vim Instant Markdown
+"let g:instant_markdown_slow = 1  " Only update after save or inactivity
+let g:instant_markdown_autostart = 0  " Don't open preview on new Markdown load
 
 " javascript-libraries-syntax
 let g:used_javascript_libs = 'angularjs,underscore,jquery'
