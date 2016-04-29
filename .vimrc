@@ -235,6 +235,11 @@ autocmd FileType py setlocal textwidth=79
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
+" OS X tweaks
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -256,14 +261,18 @@ let g:pymode_folding = 0
 let g:pymode_rope = 0
 
 " Easymotion
+" ----------
 map <Leader> <Plug>(easymotion-prefix)
 
+" Vim Markdown
+" ------------
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sql', 'javascript']
+
 " Vim Instant Markdown
+" --------------------
 "let g:instant_markdown_slow = 1  " Only update after save or inactivity
 let g:instant_markdown_autostart = 0  " Don't open preview on new Markdown load
 
 " javascript-libraries-syntax
+" ---------------------------
 let g:used_javascript_libs = 'angularjs,underscore,jquery'
-
-" OS X tweaks
-autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
