@@ -1,2 +1,4 @@
 # Ignore Vim undofiles
 undodir/*
+
+plugged/
