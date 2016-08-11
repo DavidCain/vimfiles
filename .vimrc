@@ -33,7 +33,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'burnettk/vim-angular'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/syntastic',
+Plug 'scrooloose/syntastic', { 'for': 'javascript' }
 
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
