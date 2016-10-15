@@ -8,7 +8,6 @@
 call plug#begin('~/.vim/plugged')
 
 " Python
-Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'vim-scripts/pythoncomplete', { 'for': 'python' }
 
 Plug 'bogado/file-line'
@@ -33,7 +32,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'burnettk/vim-angular'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/syntastic', { 'for': 'javascript' }
+Plug 'scrooloose/syntastic'
 
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
@@ -234,8 +233,8 @@ set modelines=0 " Closes a small vulnerability (see options.txt)
 autocmd FileType text setlocal textwidth=72
 autocmd FileType py setlocal textwidth=79
 
-" Delete blankspace at the end of python code
-autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+" Delete blankspace at the end of Python code
+autocmd BufWritePre *.py :%s/\s\+$//e
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " OS X tweaks
@@ -253,15 +252,16 @@ let g:pydiction_location = '~/.vim/vimfiles/pydiction/complete-dict'
 " Plugin 'pythoncomplete' works with this as well
 " Download from: http://www.vim.org/scripts/script.php?script_id=1542
 
-" Python mode settings
-" --------------------
-let g:pymode_lint_on_write = 1 " pylint checking every save
-" Ignore warnings about long lines, McCabe complexity, blank lines,
-" block comments, and continuation lines
+" Syntastic
+" ---------
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_check_on_wq = 0
+
+" Ignore warnings about long lines & McCabe complexity
 " (See http://pep8.readthedocs.org/en/latest/intro.html#error-codes)
-let g:pymode_lint_ignore = "C901,E121,E126,E265,E302,E303,E501"
-let g:pymode_folding = 0
-let g:pymode_rope = 0
+let g:syntastic_python_flake8_args='--ignore=C901,E128,E265,E501'
 
 " Easymotion
 " ----------
