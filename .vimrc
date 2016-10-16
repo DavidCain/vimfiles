@@ -233,8 +233,8 @@ set modelines=0 " Closes a small vulnerability (see options.txt)
 autocmd FileType text setlocal textwidth=72
 autocmd FileType py setlocal textwidth=79
 
-" Delete blankspace at the end of Python code
-autocmd BufWritePre *.py :%s/\s\+$//e
+" Delete blankspace at the end of lines
+autocmd BufWritePre *.js,*.html,*.py :%s/\s\+$//e
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " OS X tweaks
