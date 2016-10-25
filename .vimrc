@@ -41,10 +41,6 @@ Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " General options
 """""""""""""""""""""""""""""""""""""""""""""""""""
@@ -262,6 +258,9 @@ let g:syntastic_check_on_wq = 0
 " Ignore warnings about long lines & McCabe complexity
 " (See http://pep8.readthedocs.org/en/latest/intro.html#error-codes)
 let g:syntastic_python_flake8_args='--ignore=C901,E128,E265,E501'
+
+" Ignore HTML errors that are produced by Tidy
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
 
 " Easymotion
 " ----------
