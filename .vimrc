@@ -32,10 +32,12 @@ Plug 'easymotion/vim-easymotion'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'burnettk/vim-angular'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/syntastic'
 
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
+
+" Syntax
+Plug 'w0rp/ale'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -250,26 +252,13 @@ let g:pydiction_location = '~/.vim/vimfiles/pydiction/complete-dict'
 " Plugin 'pythoncomplete' works with this as well
 " Download from: http://www.vim.org/scripts/script.php?script_id=1542
 
-" Syntastic
-" ---------
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_check_on_wq = 0
-
-" Ignore warnings about long lines & McCabe complexity
-" (See http://pep8.readthedocs.org/en/latest/intro.html#error-codes)
-let g:syntastic_python_flake8_args='--ignore=C901,E128,E265,E501,E241'
-
-" Ignore HTML errors that are produced by Tidy
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
-
-" Use eslint
-let g:syntastic_javascript_checkers=['eslint']
-
 " Easymotion
 " ----------
 map <Leader> <Plug>(easymotion-prefix)
+
+" ALE
+" ---
+let g:ale_python_flake8_args='--ignore=C901,E128,E265,E501,E241'
 
 " Vim Markdown
 " ------------
