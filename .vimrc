@@ -232,6 +232,7 @@ autocmd FileType py setlocal textwidth=79
 
 " Delete blankspace at the end of lines
 autocmd BufWritePre *.js,*.html,*.py :%s/\s\+$//e
+autocmd VimResized * wincmd =
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " OS X tweaks
