@@ -7,9 +7,6 @@
 
 call plug#begin('~/.vim/plugged')
 
-" Python
-Plug 'vim-scripts/pythoncomplete', { 'for': 'python' }
-
 Plug 'bogado/file-line'
 Plug 'sjl/gundo.vim/'
 
@@ -28,15 +25,18 @@ Plug 'tpope/vim-tbone'
 
 Plug 'easymotion/vim-easymotion'
 
+" Fuzzy-finding
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 " JavaScript
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'burnettk/vim-angular'
-Plug 'pangloss/vim-javascript'
 
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
 
-" Syntax
+" Language & syntax
+Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 
 " Add plugins to &runtimepath
