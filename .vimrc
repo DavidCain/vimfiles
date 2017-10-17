@@ -243,6 +243,9 @@ autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
+" JavaScript framework syntax highlighting & completion
+let g:used_javascript_libs = 'underscore,angular,jasmine,angularui'
+
 " Python auto-complete
 " --------------------
 " Download from: http://www.vim.org/scripts/script.php?script_id=850
