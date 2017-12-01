@@ -51,7 +51,6 @@ set nocompatible " Not vi compatibile (affects other settings)
 filetype plugin indent on " 'on': Enables filetype detection
                           " 'plugin': Enables file-specific plugins
                           " 'indent': Indent files
-let mapleader=',' " Change the mapleader from \ to ','
 syntax on " Turns on syntax highlighting
 set synmaxcol=200  " Don't syntax highlight long lines (helps on large files)
 set ruler " Always show curent position
@@ -190,9 +189,31 @@ map <Right> 4zl
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader=',' " Change the mapleader from \ to ','
+
 " Delete text to the blackhole register
 nnoremap <leader><leader>d "_d
 vnoremap <leader><leader>D "_D
+
+" Easymotion
+" ----------
+" Use ,,<motion> to trigger easymotion
+map <Leader> <Plug>(easymotion-prefix)
+
+" fzf (fuzzy file finder)
+" (works best with .bashrc configuration to make fzf use Ag)
+" Use Ctrl-X and Ctrl-V for splits on selected files/buffers
+" ----------------------------------------------------------
+" Use 'Ag' to do a `git grep` directly in a buffer
+nmap <Leader>a :Ag<CR>
+" Simple buffer switching (:buffers, but better)
+nmap <Leader>b :Buffers<CR>
+" :e on steroids
+nmap <Leader>e :Files<CR>
+nmap <Leader>m :Marks<CR>
+" Exhuberant CTags
+nmap <Leader>t :Tags<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI Settings
@@ -252,10 +273,6 @@ let g:used_javascript_libs = 'underscore,angular,jasmine,angularui'
 let g:pydiction_location = '~/.vim/vimfiles/pydiction/complete-dict'
 " Plugin 'pythoncomplete' works with this as well
 " Download from: http://www.vim.org/scripts/script.php?script_id=1542
-
-" Easymotion
-" ----------
-map <Leader> <Plug>(easymotion-prefix)
 
 " ALE
 " ---
