@@ -116,9 +116,6 @@ set grepprg=ack " Use ack instead of grep
 " Remappings
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
-" map control-backspace to delete the previous word
-:imap <C-BS> <C-W>
-
 " Easily move lines of text
 nnoremap <A-j> :m+<CR>==
 nnoremap <A-k> :m-2<CR>==
@@ -214,23 +211,12 @@ nmap <Leader>m :Marks<CR>
 " Exhuberant CTags
 nmap <Leader>t :Tags<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-" GUI Settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
 colorscheme jellybeans
-if has("gui_running")
-    set winaltkeys=no " Disable alt-keys (doesn't interfere with Alt bindings)
-    set guioptions-=m " Disable the menu
-    set guioptions-=T " Disable the toolbar
-    set guioptions-=l " Disable left scrollbar
-    set guioptions-=r " Disable right scrollbar
-
-    set guifont=Monospace\ 10
-    set columns=84
-    "set lines=999 " (Problematic on resourcing- put this into .gvimrc)
-endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " .vimrc
