@@ -216,7 +216,7 @@ nmap <Leader>t :Tags<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 set background=dark
-colorscheme jellybeans
+silent! colorscheme jellybeans  " Use silent to quiet first load
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " .vimrc
