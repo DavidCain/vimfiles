@@ -1,6 +1,3 @@
-" TODO: searching, excluding comments
-" TODO: automatically set tw=72 when typing function headers
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Vim-plug
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -71,7 +68,6 @@ set nojoinspaces " Only insert one space after sentences in join operations
 set tabstop=4 " Sets tabs to 4 spaces
 set shiftwidth=4 " < and > keys indent/unindent 4 spaces
 set softtabstop=4 " Treats four spaces as one tab
-autocmd FileType html,ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 set shiftround  " use multiple of shiftwidth when indenting with '<' and '>'
 set smarttab " Use 'shiftwidth' setting at start of lines
 set expandtab " Inserts four spaces with the tab key
@@ -82,11 +78,10 @@ set backspace=indent,eol,start " backspace over everything in insert mode
 set nobackup " Don't make backup files
 set noswapfile " Don't make .swp files
 
-if version >= 703
-  set undodir=~/.vim/undodir
-  set undofile " Enable undofiles (store edit history for file)
-  set undoreload=10000 "maximum lines to save for undo on a buffer reload
-endif
+""" Undo
+set undodir=~/.vim/undodir
+set undofile " Enable undofiles (store edit history for file)
+set undoreload=10000 "maximum lines to save for undo on a buffer reload
 set undolevels=1000 "maximum number of changes that can be undone
 
 
@@ -102,7 +97,7 @@ set wildignore=*.o,*.a,*.swp,*.bak,*.pyc,*.class " Ignore certain file types
 set incsearch " Search as you type
 set hlsearch  " Highlight search term in text
 set ignorecase " All lower case strings are case insensitive, but if one 
-set smartcase  " character is upper-case, it's case sensitive
+set smartcase  " Only enforce case-sensitive search if a character is upper-case
 set grepprg=ack " Use ack instead of grep
 
 " Press Space to turn off highlighting and clear any message already displayed.
@@ -115,30 +110,8 @@ set grepprg=ack " Use ack instead of grep
 " Remappings
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Easily move lines of text
-nnoremap <A-j> :m+<CR>==
-nnoremap <A-k> :m-2<CR>==
-nnoremap <A-h> <<
-nnoremap <A-l> >>
-inoremap <A-j> <Esc>:m+<CR>==gi
-inoremap <A-k> <Esc>:m-2<CR>==gi
-inoremap <A-h> <Esc><<`]a
-inoremap <A-l> <Esc>>>`]a
-vnoremap <A-j> :m'>+<CR>gv=gv
-vnoremap <A-k> :m-2<CR>gv=gv
-vnoremap <A-h> <gv
-vnoremap <A-l> >gv
-
 " Make Y yank to end of line (consistent with D and C)
 nnoremap Y y$
-
-" Shortcuts to adjust textwidth
-imap <F7> <C-o>:set textwidth=72<CR>
-map <F7> :set textwidth=72<CR>
-imap <F8> <C-o>:set textwidth=79<CR>
-map <F8> :set textwidth=79<CR>
-imap <F9> <C-o>:set textwidth=0<CR>
-map <F9> :set textwidth=0<CR>
 
 " Simpler window navigation 
 map <C-h> <C-w>h
@@ -157,8 +130,6 @@ cmap w!! w !sudo tee % >/dev/null
 " Use ipdb for debugging
 " TODO: Filetype:
 " - JS: debugger
-" - Ruby: Pry
-" - Python: ipdb
 :map <F10> oimport ipdb; ipdb.set_trace()<CR><Esc>
 imap <F10> import ipdb; ipdb.set_trace()<Esc>
 
@@ -172,9 +143,6 @@ nnoremap ; :
 " Bash-like keys for the command line
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
-cnoremap <C-K> <C-U>
-cnoremap <C-P> <Up>
-cnoremap <C-N> <Down>
 
 " Use arrow keys for moving window
 map <Down> 4<C-e>
@@ -232,12 +200,12 @@ nnoremap <F5> :so ~/.vimrc <Esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 set modelines=0 " Closes a small vulnerability (see options.txt)
-" /\(#.*\)\@<!foo Search for foo, but not on commented lines
 
 " Automatically set textwidth for plaintext and Python source
 autocmd FileType text setlocal textwidth=72
 autocmd FileType py setlocal textwidth=79
 
+" Resize panes proportionally if the window is resized (useful within tmux)
 autocmd VimResized * wincmd =
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
@@ -248,16 +216,6 @@ autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
-
-" JavaScript framework syntax highlighting & completion
-let g:used_javascript_libs = 'underscore,angular,jasmine,angularui'
-
-" Python auto-complete
-" --------------------
-" Download from: http://www.vim.org/scripts/script.php?script_id=850
-let g:pydiction_location = '~/.vim/vimfiles/pydiction/complete-dict'
-" Plugin 'pythoncomplete' works with this as well
-" Download from: http://www.vim.org/scripts/script.php?script_id=1542
 
 " ALE
 " ---
@@ -279,11 +237,6 @@ let g:ale_lint_delay=350  " Wait longer before checking for syntax errors
 " ------------
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sql', 'javascript']
 
-" Vim Instant Markdown
-" --------------------
-"let g:instant_markdown_slow = 1  " Only update after save or inactivity
-let g:instant_markdown_autostart = 0  " Don't open preview on new Markdown load
-
 " javascript-libraries-syntax
 " ---------------------------
-let g:used_javascript_libs = 'angularjs,underscore,jquery'
+let g:used_javascript_libs = 'angularjs,jasmine,lodash,jquery'
