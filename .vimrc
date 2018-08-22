@@ -168,8 +168,8 @@ map <Leader> <Plug>(easymotion-prefix)
 " (works best with .bashrc configuration to make fzf use Ag)
 " Use Ctrl-X and Ctrl-V for splits on selected files/buffers
 " ----------------------------------------------------------
-" Use 'Ag' to do a `git grep` directly in a buffer
-nmap <Leader>a :Ag<CR>
+" Use 'Rg' to do a `git grep` directly in a buffer
+nmap <Leader>r :Rg<CR>
 " Simple buffer switching (:buffers, but better)
 nmap <Leader>b :Buffers<CR>
 " :e on steroids
@@ -177,6 +177,13 @@ nmap <Leader>e :Files<CR>
 nmap <Leader>m :Marks<CR>
 " Exhuberant CTags
 nmap <Leader>t :Tags<CR>
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual Settings
