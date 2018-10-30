@@ -208,6 +208,8 @@ nnoremap <F5> :so ~/.vimrc <Esc>
 
 set modelines=0 " Closes a small vulnerability (see options.txt)
 
+autocmd BufWritePre *.js,*.html,*.py,*.sql :%s/\s\+$//e " Delete trailing whitespace
+
 " Automatically set textwidth for plaintext and Python source
 autocmd FileType text setlocal textwidth=72
 autocmd FileType py setlocal textwidth=79
@@ -226,18 +228,6 @@ autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
 
 " ALE
 " ---
-" Ignore certain Python linter errors
-" see: http://pep8.readthedocs.io/en/latest/intro.html#error-codes
-" and  http://flake8.pycqa.org/en/latest/user/error-codes.html
-"  - C901: McCabe cyclomatic complexity (flake8-only)
-"  - E128: continuation line under-indented for visual indent
-"  - E265: block comment should start with ‘# ‘
-"  - E501: line too long (82 > 79 characters)
-"  - E241: multiple spaces after ‘,’
-"  - W291: trailing whitespace (auto-stripped on save by BufWritePre)
-"  - W293: blank line contains whitespace (auto-stripped by BufWritePre)
-let g:ale_python_flake8_args='--ignore=C901,E128,E265,E501,E241,W291,W293'
-autocmd BufWritePre *.js,*.html,*.py,*.sql :%s/\s\+$//e " Delete trailing whitespace
 let g:ale_lint_delay=350  " Wait longer before checking for syntax errors
 
 " Vim Markdown
