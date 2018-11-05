@@ -277,11 +277,18 @@ let g:used_javascript_libs = 'angularjs,jasmine,lodash,jquery'
 
 " Vim-test
 " --------
-nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
-nmap <silent> t<C-l> :TestLast<CR>
-nmap <silent> t<C-g> :TestVisit<CR>
+
+" Clear the contents of the tmux window
+function! ClearTmuxPane()
+    :call VimuxRunCommand("clear")
+    :VimuxClearRunnerHistory
+endfunction
+
+nmap <silent> t<C-n> :call ClearTmuxPane()<CR>:TestNearest<CR>
+nmap <silent> t<C-f> :call ClearTmuxPane()<CR>:TestFile<CR>
+nmap <silent> t<C-s> :call ClearTmuxPane()<CR>:TestSuite<CR>
+nmap <silent> t<C-l> :call ClearTmuxPane()<CR>:TestLast<CR>
+nmap <silent> t<C-g> :call ClearTmuxPane()<CR>:TestVisit<CR>
 
 " vim-test transformation to run nose tests via `make singletest`.
 " If a command looks like "nosetests ...", transform it to "make singletest NOSEARGS='...'"
