@@ -38,6 +38,9 @@ Plug 'nanotech/jellybeans.vim'
 " Language & syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'css', 'less', 'scss', 'json', 'markdown'] }
 
 " Testing
 Plug 'janko-m/vim-test'
@@ -251,6 +254,10 @@ autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Prettier
+" -------
+let g:prettier#exec_cmd_async = 1
 
 " Gundo
 " -----
