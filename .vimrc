@@ -4,7 +4,6 @@
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'bogado/file-line'
 Plug 'sjl/gundo.vim/'
 
 " Markdown
@@ -17,8 +16,13 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-tbone'
 
+" Tmux
+Plug 'tpope/vim-tbone'
+Plug 'benmills/vimux'
+
+" Movement
+Plug 'bogado/file-line'
 Plug 'easymotion/vim-easymotion'
 
 " Fuzzy-finding
@@ -34,6 +38,10 @@ Plug 'nanotech/jellybeans.vim'
 " Language & syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
+
+" Testing
+Plug 'janko-m/vim-test'
+
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -255,3 +263,33 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sql', 'javascri
 " javascript-libraries-syntax
 " ---------------------------
 let g:used_javascript_libs = 'angularjs,jasmine,lodash,jquery'
+
+" Vim-test
+" --------
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+" vim-test transformation to run nose tests via `make singletest`.
+" If a command looks like "nosetests ...", transform it to "make singletest NOSEARGS='...'"
+function! HonorTransform(cmd) abort
+    if a:cmd =~ '^nosetests '
+        let a:cmd_sans_nosetests = "-s ".substitute(a:cmd, '^nosetests ', '', '')
+        let a:new_cmd = 'make singletest TEST_PROCESSES=0 TEST_DB_COUNT=1 NOSEARGS='.shellescape(a:cmd_sans_nosetests)
+    else
+        let a:new_cmd = a:cmd
+    endif
+    return a:new_cmd
+endfunction
+
+" Put the output of running tests into a tmux pane
+let test#strategy = "vimux"
+
+" Force use of nosetest over pytest
+let test#python#pytest#file_pattern = '\vMATCH_NOTHING_AT_ALL$'
+let test#python#nose#file_pattern = '\v(^|[\b_\.-])[Tt]est.*\.py$'
+
+let g:test#custom_transformations = {'honor': function('HonorTransform')}
+let g:test#transformation = 'honor'
