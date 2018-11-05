@@ -252,6 +252,10 @@ autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Gundo
+" -----
+nnoremap <leader>z :GundoToggle<CR>
+
 " ALE
 " ---
 let g:ale_lint_delay=350  " Wait longer before checking for syntax errors
