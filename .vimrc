@@ -284,11 +284,11 @@ function! ClearTmuxPane()
     :VimuxClearRunnerHistory
 endfunction
 
-nmap <silent> t<C-n> :call ClearTmuxPane()<CR>:TestNearest<CR>
-nmap <silent> t<C-f> :call ClearTmuxPane()<CR>:TestFile<CR>
-nmap <silent> t<C-s> :call ClearTmuxPane()<CR>:TestSuite<CR>
-nmap <silent> t<C-l> :call ClearTmuxPane()<CR>:TestLast<CR>
-nmap <silent> t<C-g> :call ClearTmuxPane()<CR>:TestVisit<CR>
+nmap <silent> t<C-n> :w<CR>:call ClearTmuxPane()<CR>:TestNearest<CR>
+nmap <silent> t<C-f> :w<CR>:call ClearTmuxPane()<CR>:TestFile<CR>
+nmap <silent> t<C-s> :w<CR>:call ClearTmuxPane()<CR>:TestSuite<CR>
+nmap <silent> t<C-l> :w<CR>:call ClearTmuxPane()<CR>:TestLast<CR>
+nmap <silent> t<C-g> :w<CR>:call ClearTmuxPane()<CR>:TestVisit<CR>
 
 " vim-test transformation to run nose tests via `make singletest`.
 " If a command looks like "nosetests ...", transform it to "make singletest NOSEARGS='...'"
