@@ -255,6 +255,10 @@ autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
+" TBone
+nnoremap <leader>p :Tput<CR>  " Paste the contents of the Tmux buffer
+nnoremap <leader>y :Tyank<CR>  " Yank text into the Tmux buffer
+
 " Prettier
 " -------
 let g:prettier#exec_cmd_async = 1
