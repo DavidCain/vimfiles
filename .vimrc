@@ -170,6 +170,12 @@ let mapleader=',' " Change the mapleader from \ to ','
 nnoremap <leader><leader>d "_d
 vnoremap <leader><leader>D "_D
 
+" Quickly open/close location buffer (used by ALE for lint/syntax errors)
+nmap <leader>l :lopen<CR>
+nmap <leader>c :lclose<CR>
+" Quickly advance through location list
+nmap <leader>n :lnext<CR>
+
 " Easymotion
 " ----------
 " Use ,,<motion> to trigger easymotion
