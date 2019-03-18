@@ -273,6 +273,7 @@ nnoremap <leader>z :GundoToggle<CR>
 " ALE
 " ---
 let g:ale_lint_delay=350  " Wait longer before checking for syntax errors
+let g:ale_fixers = {'python': ['isort']}
 
 " Vim Markdown
 " ------------
