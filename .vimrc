@@ -29,9 +29,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" JavaScript
-Plug 'othree/javascript-libraries-syntax.vim'
-
 " Colorschemes
 Plug 'nanotech/jellybeans.vim'
 
