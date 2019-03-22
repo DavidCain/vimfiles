@@ -70,6 +70,7 @@ set splitright " Vertical splits open to the right
 set splitbelow " Horizonal splits open to the bottom
 "set tildeop " Use the tilde as an operator (can be used with motions)
 set nojoinspaces " Only insert one space after sentences in join operations
+set exrc  " Allow per-project Vim configuration
 
 
 """ Tabbing
