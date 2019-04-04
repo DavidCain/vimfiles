@@ -10,10 +10,13 @@ Plug 'sjl/gundo.vim/'
 Plug 'tpope/vim-markdown'
 Plug 'suan/vim-instant-markdown'
 
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
 " Miscellaneous TPope
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 
@@ -170,9 +173,15 @@ vnoremap <leader><leader>D "_D
 
 " Quickly open/close location buffer (used by ALE for lint/syntax errors)
 nmap <leader>l :lopen<CR>
-nmap <leader>c :lclose<CR>
+nmap <leader>x :lclose<CR>
+
 " Quickly advance through location list
 nmap <leader>n :lnext<CR>
+
+" vim-git-gutter
+" --------------
+nmap <leader>c :GitGutterNextHunk<CR>
+nmap <leader>C :GitGutterPrevHunk<CR>
 
 " Gundo
 " -----
