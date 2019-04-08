@@ -284,6 +284,7 @@ let g:prettier#exec_cmd_async = 1
 " ---
 let g:ale_lint_delay=350  " Wait longer before checking for syntax errors
 let g:ale_fixers = {'python': ['isort']}
+let g:ale_linters = {'python': ['pylint']}
 
 " Vim Markdown
 " ------------
