@@ -282,9 +282,12 @@ let g:prettier#exec_cmd_async = 1
 
 " ALE
 " ---
-let g:ale_lint_delay=350  " Wait longer before checking for syntax errors
-let g:ale_fixers = {'python': ['isort']}
+let g:ale_fixers = {'python': ['isort']}  " ALEFix will run `isort` on the file
+let g:ale_fix_on_save = 1  " Automatically run all fixers on save
 let g:ale_linters = {'python': ['pylint']}
+
+let g:ale_lint_on_text_change = "normal" " Don't lint while still in insert mode
+let g:ale_lint_delay = 350  " Wait longer before checking for syntax errors
 
 " Vim Markdown
 " ------------
