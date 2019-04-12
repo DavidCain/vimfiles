@@ -45,6 +45,9 @@ Plug 'prettier/vim-prettier', {
 " Testing
 Plug 'janko-m/vim-test'
 
+" Tiny plugin to make <leader>l and <leader>q toggle location & quickfix windows
+Plug 'Valloric/ListToggle'
+
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -167,16 +170,17 @@ map <Right> 4zl
 """""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=',' " Change the mapleader from \ to ','
 
+" Toggle location and quickfix (Valloric/ListToggle)
+let g:lt_location_list_toggle_map = '<leader>l'
+let g:lt_quickfix_list_toggle_map = '<leader>q'
+
 " Delete text to the blackhole register
 nnoremap <leader><leader>d "_d
 vnoremap <leader><leader>D "_D
 
-" Quickly open/close location buffer (used by ALE for lint/syntax errors)
-nmap <leader>l :lopen<CR>
-nmap <leader>x :lclose<CR>
-
 " Quickly advance through location list
 nmap <leader>n :lnext<CR>
+nmap <leader>N :lprev<CR>
 
 " vim-git-gutter
 " --------------
