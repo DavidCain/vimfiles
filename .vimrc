@@ -244,7 +244,7 @@ nnoremap <F5> :so ~/.vimrc <Esc>
 
 set modelines=0 " Closes a small vulnerability (see options.txt)
 
-autocmd BufWritePre *.js,*.html,*.py,*.sql :%s/\s\+$//e " Delete trailing whitespace
+autocmd BufWritePre *.js,*.html,*.md,*.py,*.sql :%s/\s\+$//e " Delete trailing whitespace
 
 " Automatically set textwidth for plaintext and Python source
 autocmd FileType text setlocal textwidth=72
