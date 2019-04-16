@@ -62,10 +62,9 @@ filetype plugin indent on " 'on': Enables filetype detection
                           " 'plugin': Enables file-specific plugins
                           " 'indent': Indent files
 syntax on " Turns on syntax highlighting
-set synmaxcol=200  " Don't syntax highlight long lines (helps on large files)
+set synmaxcol=200 " Don't syntax highlight long lines (helps on large files)
 set ruler " Always show curent position
 set number " Turn on (absolute) line numbers
-"set relativenumber " Sets line numbers to be relative instead of absolute
 set vb t_vb= " Flash screen in place of beeps
 set showcmd " Show command being typed
 set showmatch " Show matching brackets
@@ -74,20 +73,19 @@ set title " Set the terminal's title
 set autoread " Automatically read file again if it's been changed elsewhere
 set splitright " Vertical splits open to the right
 set splitbelow " Horizonal splits open to the bottom
-"set tildeop " Use the tilde as an operator (can be used with motions)
 set nojoinspaces " Only insert one space after sentences in join operations
-set exrc  " Allow per-project Vim configuration
+set exrc " Allow per-project Vim configuration
 
 
 """ Tabbing
 set tabstop=4 " Sets tabs to 4 spaces
 set shiftwidth=4 " < and > keys indent/unindent 4 spaces
 set softtabstop=4 " Treats four spaces as one tab
-set shiftround  " use multiple of shiftwidth when indenting with '<' and '>'
+set shiftround " Use multiple of shiftwidth when indenting with '<' and '>'
 set smarttab " Use 'shiftwidth' setting at start of lines
 set expandtab " Inserts four spaces with the tab key
 set autoindent
-set backspace=indent,eol,start " backspace over everything in insert mode
+set backspace=indent,eol,start " Backspace over everything in insert mode
 
 """ Vim files
 set nobackup " Don't make backup files
@@ -96,8 +94,8 @@ set noswapfile " Don't make .swp files
 """ Undo
 set undodir=~/.vim/undodir
 set undofile " Enable undofiles (store edit history for file)
-set undoreload=10000 "maximum lines to save for undo on a buffer reload
-set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 " Maximum lines to save for undo on a buffer reload
+set undolevels=1000 " Maximum number of changes that can be undone
 
 
 """ Wild menu
@@ -110,9 +108,9 @@ set wildignore=*.o,*.a,*.swp,*.bak,*.pyc,*.class " Ignore certain file types
 " Searching
 """""""""""""""""""""""""""""""""""""""""""""""""""
 set incsearch " Search as you type
-set hlsearch  " Highlight search term in text
+set hlsearch " Highlight search term in text
 set ignorecase " All lower case strings are case insensitive, but if one 
-set smartcase  " Only enforce case-sensitive search if a character is upper-case
+set smartcase " Only enforce case-sensitive search if a character is upper-case
 set grepprg=ack " Use ack instead of grep
 
 " Press Space to turn off highlighting and clear any message already displayed.
@@ -192,8 +190,8 @@ nmap <leader>C :GitGutterPrevHunk<CR>
 nnoremap <leader>z :GundoToggle<CR>
 
 " TBone
-nnoremap <leader>p :Tput<CR>  " Paste the contents of the Tmux buffer
-nnoremap <leader>y :Tyank<CR>  " Yank text into the Tmux buffer
+nnoremap <leader>p :Tput<CR> " Paste the contents of the Tmux buffer
+nnoremap <leader>y :Tyank<CR> " Yank text into the Tmux buffer
 
 " Easymotion
 " ----------
@@ -226,7 +224,7 @@ command! -bang -nargs=* Rg
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
 set background=dark
-silent! colorscheme jellybeans  " Use silent to quiet first load
+silent! colorscheme jellybeans " Use silent to quiet first load
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " .vimrc
@@ -286,12 +284,12 @@ let g:prettier#exec_cmd_async = 1
 
 " ALE
 " ---
-let g:ale_fixers = {'python': ['isort']}  " ALEFix will run `isort` on the file
-let g:ale_fix_on_save = 1  " Automatically run all fixers on save
+let g:ale_fixers = {'python': ['isort']} " ALEFix will run `isort` on the file
+let g:ale_fix_on_save = 1 " Automatically run all fixers on save
 let g:ale_linters = {'python': ['pylint']}
 
 let g:ale_lint_on_text_change = "normal" " Don't lint while still in insert mode
-let g:ale_lint_delay = 350  " Wait longer before checking for syntax errors
+let g:ale_lint_delay = 350 " Wait longer before checking for syntax errors
 
 " Vim Markdown
 " ------------
