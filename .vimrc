@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'sjl/gundo.vim/'
 
 " Markdown
-Plug 'tpope/vim-markdown'
 Plug 'suan/vim-instant-markdown'
 
 " Git
