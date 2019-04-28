@@ -11,6 +11,7 @@ Plug 'suan/vim-instant-markdown'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
 " Miscellaneous TPope
@@ -276,6 +277,7 @@ nnoremap t<C-t> :call ToggleTest(expand('%'))<CR>
 " OS X tweaks
 """""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
+let g:netrw_browsex_viewer = "open"  " Enables :Gbrowse to use default browser
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
