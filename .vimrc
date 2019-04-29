@@ -333,12 +333,12 @@ nmap <silent> t<C-g> :w<CR>:call ClearTmuxPane()<CR>:TestVisit<CR>
 " If a command looks like "nosetests ...", transform it to "make singletest NOSEARGS='...'"
 function! HonorTransform(cmd) abort
     if a:cmd =~ '^nosetests '
-        let a:cmd_sans_nosetests = "-s ".substitute(a:cmd, '^nosetests ', '', '')
-        let a:new_cmd = 'make singletest TEST_PROCESSES=0 TEST_DB_COUNT=1 NOSEARGS='.shellescape(a:cmd_sans_nosetests)
+        let l:cmd_sans_nosetests = "-s ".substitute(a:cmd, '^nosetests ', '', '')
+        let l:new_cmd = 'make singletest TEST_PROCESSES=0 TEST_DB_COUNT=1 NOSEARGS='.shellescape(l:cmd_sans_nosetests)
     else
-        let a:new_cmd = a:cmd
+        let l:new_cmd = a:cmd
     endif
-    return a:new_cmd
+    return l:new_cmd
 endfunction
 
 " Put the output of running tests into a tmux pane
