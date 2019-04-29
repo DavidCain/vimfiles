@@ -56,14 +56,14 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " General options
 """""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible " Not vi compatibile (affects other settings)
+set nocompatible " Not vi compatible (affects other settings)
 
 filetype plugin indent on " 'on': Enables filetype detection
                           " 'plugin': Enables file-specific plugins
                           " 'indent': Indent files
 syntax on " Turns on syntax highlighting
 set synmaxcol=200 " Don't syntax highlight long lines (helps on large files)
-set ruler " Always show curent position
+set ruler " Always show current position
 set number " Turn on (absolute) line numbers
 set vb t_vb= " Flash screen in place of beeps
 set showcmd " Show command being typed
@@ -72,7 +72,7 @@ set nowrap " No line wrapping
 set title " Set the terminal's title
 set autoread " Automatically read file again if it's been changed elsewhere
 set splitright " Vertical splits open to the right
-set splitbelow " Horizonal splits open to the bottom
+set splitbelow " Horizontal splits open to the bottom
 set nojoinspaces " Only insert one space after sentences in join operations
 set exrc " Allow per-project Vim configuration
 
@@ -205,7 +205,7 @@ nnoremap <leader>y :Tyank<CR> " Yank text into the Tmux buffer
 map <Leader> <Plug>(easymotion-prefix)
 
 " fzf (fuzzy file finder)
-" (works best with .bashrc configuration to make fzf use Ag)
+" (works best with .bashrc configuration to make fzf use ripgrep)
 " Use Ctrl-X and Ctrl-V for splits on selected files/buffers
 " ----------------------------------------------------------
 " Use 'Rg' to do a `git grep` directly in a buffer
