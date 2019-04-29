@@ -231,14 +231,19 @@ set background=dark
 silent! colorscheme jellybeans " Use silent to quiet first load
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
-" .vimrc
+" .rc files
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Automatically resource the .vimrc after changes
-autocmd! bufwritepost .vimrc source %
+" Automatically resource .vimrc after changes
+autocmd! BufWritePost .vimrc source %
 
 " Resource .vimrc (useful in other instances of Vim)
 nnoremap <F5> :so ~/.vimrc <Esc>
+
+" Automatically resource .tmux.conf after changes (requires vim-tbone)
+" NB: This does not completely refresh settings! (a server restart is required)
+" `silent` suppresses output to avoid 'Press enter or type command' prompt
+autocmd! BufWritePost .tmux.conf silent Tmux source-file ~/.tmux.conf
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
