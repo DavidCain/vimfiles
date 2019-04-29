@@ -232,6 +232,15 @@ command! -bang -nargs=* Rg
 set background=dark
 silent! colorscheme jellybeans " Use silent to quiet first load
 
+" Disable the colorscheme's default background on common syntax groups
+" This lets Tmux control the bg on Vim panes (not just normal shell panes)
+" Terminal emulators (e.g. iTerm) should also set jellybean's bg (#151515)
+" It's important that some groups be left alone (e.g. DiffAdd/DiffDelete)
+highlight Normal ctermbg=NONE
+highlight NonText ctermbg=NONE
+highlight SignColumn ctermbg=NONE
+highlight LineNr ctermbg=NONE
+
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " .rc files
 """""""""""""""""""""""""""""""""""""""""""""""""""
