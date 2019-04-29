@@ -168,9 +168,11 @@ map <Right> 4zl
 """""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=',' " Change the mapleader from \ to ','
 
+" Run an arbitrary Git command (trailing space is intentional!)
+nmap <leader>g :Git 
 " Show Git blame in the buffer, ignoring whitespace and moves
 " I'd like `--date=short` to omit the time & TZ, but Gblame lacks support
-nmap <leader>g :Gblame wM<CR>
+nmap <leader>h :Gblame wM<CR>
 
 " Toggle location and quickfix (Valloric/ListToggle)
 let g:lt_location_list_toggle_map = '<leader>l'
