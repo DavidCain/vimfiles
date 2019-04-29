@@ -314,10 +314,6 @@ let g:ale_lint_delay = 350 " Wait longer before checking for syntax errors
 " ------------
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'sql', 'javascript']
 
-" javascript-libraries-syntax
-" ---------------------------
-let g:used_javascript_libs = 'angularjs,jasmine,lodash,jquery'
-
 " Vim-test
 " --------
 
