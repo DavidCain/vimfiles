@@ -12,7 +12,6 @@ Plug 'suan/vim-instant-markdown'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'airblade/vim-gitgutter'
 
 " Miscellaneous TPope
 Plug 'tpope/vim-abolish'
@@ -184,11 +183,6 @@ vnoremap <leader><leader>D "_D
 " Quickly advance through location list
 nmap <leader>n :lnext<CR>
 nmap <leader>N :lprev<CR>
-
-" vim-git-gutter
-" --------------
-nmap <leader>c :GitGutterNextHunk<CR>
-nmap <leader>C :GitGutterPrevHunk<CR>
 
 " Gundo
 " -----
