@@ -38,7 +38,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
+  \ 'do': 'which yarn && yarn install',
   \ 'for': ['javascript', 'css', 'less', 'scss', 'json', 'markdown'] }
 
 " Testing
