@@ -264,23 +264,35 @@ autocmd FileType py setlocal textwidth=79
 " Resize panes proportionally if the window is resized (useful within tmux)
 autocmd VimResized * wincmd =
 
-" Toggle between file and corresponding test file.
-function! ToggleTest(path)
+function! GetTestFile(path)
     if a:path =~ "_test\.py$"
-        let l:other_path = substitute(expand('%'), "_test\.py$", ".py", "")
+        return substitute(expand('%'), "_test\.py$", ".py", "")
     elseif a:path =~ "\.py$"
-        let l:other_path = substitute(expand('%'), "\.py$", "_test.py", "")
+        return substitute(expand('%'), "\.py$", "_test.py", "")
     elseif a:path =~ "\.test\.js$"
-        let l:other_path = substitute(expand('%'), "\.test\.js$", ".js", "")
+        return substitute(expand('%'), "\.test\.js$", ".js", "")
     elseif a:path =~ "\.js$"
-        let l:other_path = substitute(expand('%'), "\.js$", ".test.js", "")
+        return substitute(expand('%'), "\.js$", ".test.js", "")
     else
         echo "I'm not sure how to toggle " . a:path
-        return
+        return a:path
     endif
+endfunction
+
+" Add file (or its test file) to the buffers, open up buffer for split
+function! BufferToggleTest(path)
+    let l:other_path = GetTestFile(a:path)
+    :execute 'badd' l:other_path
+endfunction
+
+" Toggle between file and corresponding test file.
+function! ToggleTest(path)
+    let l:other_path = GetTestFile(a:path)
     :execute 'edit' l:other_path
 endfunction
+
 nnoremap t<C-t> :call ToggleTest(expand('%'))<CR>
+nnoremap b<C-t> :call BufferToggleTest(expand('%'))<CR>:Buffers<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " OS X tweaks
