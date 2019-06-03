@@ -304,6 +304,10 @@ let g:netrw_browsex_viewer = "open"  " Enables :Gbrowse to use default browser
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
+" netrw
+" -----
+let g:netrw_dirhistmax = 0  " Don't store history in .netrwhist
+
 " Prettier
 " -------
 let g:prettier#exec_cmd_async = 1
