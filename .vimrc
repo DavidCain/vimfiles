@@ -39,7 +39,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'which yarn && yarn install',
-  \ 'for': ['javascript', 'css', 'less', 'scss', 'json', 'markdown'] }
+  \ 'for': ['javascript', 'typescript', 'vue', 'tsx', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
 
 " Testing
 Plug 'janko-m/vim-test'
