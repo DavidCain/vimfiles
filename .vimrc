@@ -259,7 +259,7 @@ autocmd BufWritePre *.js,*.html,*.md,*.py,*.sql :%s/\s\+$//e " Delete trailing w
 
 " Automatically set textwidth for plaintext and Python source
 autocmd FileType text setlocal textwidth=72
-autocmd FileType py setlocal textwidth=79
+autocmd FileType py setlocal textwidth=88  " (mostly consistent with Black)
 
 " Resize panes proportionally if the window is resized (useful within tmux)
 autocmd VimResized * wincmd =
