@@ -255,6 +255,10 @@ autocmd! BufWritePost .tmux.conf silent Tmux source-file ~/.tmux.conf
 
 set modelines=0 " Closes a small vulnerability (see options.txt)
 
+" Always enable spellcheck on certain file types
+autocmd BufRead COMMIT_EDITMSG set spell
+autocmd BufNewFile,BufRead *.md,*.markdown set spell
+
 autocmd BufWritePre *.js,*.html,*.md,*.py,*.sql :%s/\s\+$//e " Delete trailing whitespace
 
 " Automatically set textwidth for plaintext and Python source
