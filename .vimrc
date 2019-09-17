@@ -310,7 +310,8 @@ let g:netrw_browsex_viewer = "open"  " Enables :Gbrowse to use default browser
 
 " Fugitive
 " --------
-set tags^=./.git/tags
+" (Fugitive *used* to automatically look in `.git` for tags, but we must now explicitly modify)
+set tags ^=./.git/tags;  " Semicolon is significant: will traverse up relative directories
 
 " netrw
 " -----
