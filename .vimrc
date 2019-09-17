@@ -14,7 +14,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'sjl/gundo.vim/'
 
 " Markdown
-Plug 'suan/vim-instant-markdown'
+" (requires daemon: `npm install -g instant-markdown-d`)
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -314,6 +315,10 @@ let g:netrw_browsex_viewer = "open"  " Enables :Gbrowse to use default browser
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Instant markdown
+" ----------------
+let g:instant_markdown_autostart = 1  " Automatically start daemon, open browser
 
 " Fugitive
 " --------
