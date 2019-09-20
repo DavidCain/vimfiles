@@ -138,6 +138,13 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" CTags
+" Remap the default "move to tag definition" to <Ctrl>-n because:
+" - <C-]> is hard to type on keyboardio
+" - <C-N> does nothing useful in normal mode
+" - On Dvorak, <C-N> is right next to its CTags complement <C-T>
+nnoremap <C-N> <C-]>
+
 " Toggle line numbers and fold column for easy copying:
 imap <silent> <F2> <Esc>:set nonumber!<CR>:set foldcolumn=0<CR>a
 nnoremap <silent> <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
