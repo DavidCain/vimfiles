@@ -13,45 +13,45 @@ call plug#begin('~/.vim/plugged')
 
 " Markdown
 " (requires daemon: `npm install -g instant-markdown-d`)
-Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }  " Live rendering when editing Markdown
 
 " Git
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-fugitive'  " Interact with Git within Vim (e.g. `:Gblame` for a blame buffer)
+Plug 'tpope/vim-rhubarb'   " GitHub integration for fugitive (killer feature: `:Gbrowse` to link selected lines)
 
 " Miscellaneous TPope
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
+Plug 'tpope/vim-abolish'     " Convert between camelCase, snake_case, PascalCase (& lots more)
+Plug 'tpope/vim-commentary'  " Comment & uncomment lines in any language (gc + selection)
+Plug 'tpope/vim-repeat'      " Make the dot operator (repeat last action) work with mappings
+Plug 'tpope/vim-surround'    " Interact with surrounding punctuation, HTML tags, etc.
 
 " Tmux
-Plug 'tpope/vim-tbone'
-Plug 'benmills/vimux'
+Plug 'tpope/vim-tbone'  " Basic Tmux integration (killer feature: access Tmux buffers -- `:Tyank`, `:Tput`)
+Plug 'benmills/vimux'   " Interact with Tmux panes from Vim buffer (killer feature: running tests in another pane!)
 
 " Movement
-Plug 'bogado/file-line'
-Plug 'easymotion/vim-easymotion'
+Plug 'bogado/file-line'           " `vim path/to/file.py:42` opens file with cursor at that line
+Plug 'easymotion/vim-easymotion'  " Motions on steroids. <leader>w tags each word - type tag to move
 
 " Fuzzy-finding
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " Install fzf (fuzzy finder for files, tags, etc)
+Plug 'junegunn/fzf.vim'  " Intreact with FZF in Vim (:Files, :Tags, and :Buffers). Works best with ripgrep!
 
 " Colorschemes
-Plug 'nanotech/jellybeans.vim'
+Plug 'nanotech/jellybeans.vim'  " colorful scheme for dark backgrounds
 
 " Language & syntax
-Plug 'sheerun/vim-polyglot'
-Plug 'w0rp/ale'
+Plug 'sheerun/vim-polyglot'  " sane language packs for each language
+Plug 'w0rp/ale'  " asynchronous linting, easy invocation of autoformatters/fixers (Black, isort, Prettier, others)
 Plug 'prettier/vim-prettier', {
   \ 'do': 'which yarn && yarn install',
   \ 'for': ['javascript', 'typescript', 'vue', 'tsx', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
 
 " Testing
-Plug 'janko-m/vim-test'
+Plug 'janko-m/vim-test'  " Run unit tests in a file, class, or method. Pairs great with vimux.
 
-" Tiny plugin to make <leader>l and <leader>q toggle location & quickfix windows
-Plug 'Valloric/ListToggle'
+" Miscellaneous
+Plug 'Valloric/ListToggle' " Tiny plugin to make <leader>l and <leader>q toggle location & quickfix windows
 
 
 " Add plugins to &runtimepath
