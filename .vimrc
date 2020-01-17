@@ -11,8 +11,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'sjl/gundo.vim/'
-
 " Markdown
 " (requires daemon: `npm install -g instant-markdown-d`)
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
