@@ -205,6 +205,12 @@ nnoremap <leader>p :Tput<CR>
 nnoremap <leader>y :Tyank<CR>
 vnoremap <leader>y :Tyank<CR>
 
+" Fugitive
+" --------
+" Easily select link to current line (or selection), writing to copy register
+nnoremap <leader>c :.Gbrowse!<CR>
+vnoremap <leader>c :Gbrowse!<CR>
+
 " Easymotion
 " ----------
 " Use ,,<motion> to trigger easymotion
