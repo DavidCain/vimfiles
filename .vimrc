@@ -197,10 +197,6 @@ vnoremap <leader><leader>D "_D
 nmap <leader>n :lnext<CR>
 nmap <leader>N :lprev<CR>
 
-" Gundo
-" -----
-nnoremap <leader>z :GundoToggle<CR>
-
 " TBone
 nnoremap <leader>p :Tput<CR> " Paste the contents of the Tmux buffer
 nnoremap <leader>y :Tyank<CR> " Yank text into the Tmux buffer
