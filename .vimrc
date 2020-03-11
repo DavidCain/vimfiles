@@ -198,8 +198,12 @@ nmap <leader>n :lnext<CR>
 nmap <leader>N :lprev<CR>
 
 " TBone
-nnoremap <leader>p :Tput<CR> " Paste the contents of the Tmux buffer
-nnoremap <leader>y :Tyank<CR> " Yank text into the Tmux buffer
+" -----
+" Paste the contents of the Tmux buffer
+nnoremap <leader>p :Tput<CR>
+" Yank text into the Tmux buffer
+nnoremap <leader>y :Tyank<CR>
+vnoremap <leader>y :Tyank<CR>
 
 " Easymotion
 " ----------
