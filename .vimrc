@@ -329,7 +329,7 @@ let g:netrw_browsex_viewer = "open"  " Enables :Gbrowse to use default browser
 
 " Instant markdown
 " ----------------
-let g:instant_markdown_autostart = 1  " Automatically start daemon, open browser
+let g:instant_markdown_autostart = 0  " Don't automatically start daemon & open browser
 
 " Fugitive
 " --------
