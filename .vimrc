@@ -74,12 +74,11 @@ set vb t_vb= " Flash screen in place of beeps
 set showcmd " Show command being typed
 set showmatch " Show matching brackets
 set nowrap " No line wrapping
-set title " Set the terminal's title
-set autoread " Automatically read file again if it's been changed elsewhere
+set autoread " Read file again if it's been changed elsewhere (but not changed in Vim)
 set splitright " Vertical splits open to the right
 set splitbelow " Horizontal splits open to the bottom
 set nojoinspaces " Only insert one space after sentences in join operations
-set exrc " Allow per-project Vim configuration
+set exrc " Allow per-project Vim configuration (NOTE: there are security concerns here)
 
 
 """ Tabbing
@@ -88,8 +87,9 @@ set shiftwidth=4 " < and > keys indent/unindent 4 spaces
 set softtabstop=4 " Treats four spaces as one tab
 set shiftround " Use multiple of shiftwidth when indenting with '<' and '>'
 set smarttab " Use 'shiftwidth' setting at start of lines
-set expandtab " Inserts four spaces with the tab key
-set autoindent
+set expandtab " Insert four spaces with the tab key
+set autoindent  " Copy indent from current line when starting a new line
+set smartindent " Smart autoindenting on new lines (should be used with `autoindent`)
 set backspace=indent,eol,start " Backspace over everything in insert mode
 
 """ Vim files
@@ -119,8 +119,6 @@ set smartcase " Only enforce case-sensitive search if a character is upper-case
 
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-" Press F4 to toggle highlighting and show current value.
-:noremap <F4> :set hlsearch! hlsearch?<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
@@ -190,8 +188,8 @@ let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
 
 " Delete text to the blackhole register
-nnoremap <leader><leader>d "_d
-vnoremap <leader><leader>D "_D
+nnoremap <leader>d "_d
+vnoremap <leader>D "_D
 
 " Quickly advance through location list
 nmap <leader>n :lnext<CR>
@@ -217,7 +215,7 @@ vnoremap <leader>c :Gbrowse!<CR>
 map <Leader> <Plug>(easymotion-prefix)
 
 " fzf (fuzzy file finder)
-" (works best with .bashrc configuration to make fzf use ripgrep)
+" (works best with .zshrc configuration to make fzf use ripgrep)
 " Use Ctrl-X and Ctrl-V for splits on selected files/buffers
 " ----------------------------------------------------------
 " Use 'Rg' to do a `git grep` directly in a buffer
