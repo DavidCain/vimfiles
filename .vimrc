@@ -84,6 +84,7 @@ set splitright " Vertical splits open to the right
 set splitbelow " Horizontal splits open to the bottom
 set exrc " Allow per-project Vim configuration (NOTE: there are security concerns here)
 set list listchars=trail:·,tab:»· " Display tab literals and trailing whitespace
+set nostartofline " Don't change column when jumping to other lines
 
 """ Tabbing
 set tabstop=4 " Sets tabs to 4 spaces
@@ -122,8 +123,11 @@ set wildignore=*.o,*.a,*.swp,*.bak,*.pyc,*.class " Ignore certain file types
 """""""""""""""""""""""""""""""""""""""""""""""""""
 set incsearch " Search as you type
 set hlsearch " Highlight search term in text
-set ignorecase " All lower case strings are case insensitive, but if one 
+set ignorecase " All lower case strings are case insensitive by default
 set smartcase " Only enforce case-sensitive search if a character is upper-case
+" Use case-sensitive search (exact string match) when `*` is used
+nnoremap * :call feedkeys("/\\C\\<" . expand("<cword>") . "\\>\r")<CR>
+nnoremap # :call feedkeys("?\\C\\<" . expand("<cword>") . "\\>\r")<CR>
 
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
