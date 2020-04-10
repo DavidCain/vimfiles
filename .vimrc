@@ -307,6 +307,8 @@ function! GetTestFile(path)
         return substitute(expand('%'), "\.test\.js$", ".js", "")
     elseif a:path =~ "\.js$"
         return substitute(expand('%'), "\.js$", ".test.js", "")
+    elseif a:path =~ "\.tsx$"
+        return substitute(expand('%'), "\.tsx$", ".test.js", "")
     else
         echo "I'm not sure how to toggle " . a:path
         return a:path
