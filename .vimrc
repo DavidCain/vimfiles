@@ -53,6 +53,9 @@ Plug 'janko-m/vim-test'  " Run unit tests in a file, class, or method. Pairs gre
 " Miscellaneous
 Plug 'Valloric/ListToggle' " Tiny plugin to make <leader>l and <leader>q toggle location & quickfix windows
 
+" Enable matchit.vim (shipped with Vim) for matching HTML tags, if/else blocks, etc. with `%`
+runtime! macros/matchit.vim
+
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -79,7 +82,7 @@ set splitright " Vertical splits open to the right
 set splitbelow " Horizontal splits open to the bottom
 set nojoinspaces " Only insert one space after sentences in join operations
 set exrc " Allow per-project Vim configuration (NOTE: there are security concerns here)
-
+set list listchars=trail:·,tab:»· " Display tab literals and trailing whitespace
 
 """ Tabbing
 set tabstop=4 " Sets tabs to 4 spaces
@@ -102,6 +105,8 @@ set undofile " Enable undofiles (store edit history for file)
 set undoreload=10000 " Maximum lines to save for undo on a buffer reload
 set undolevels=1000 " Maximum number of changes that can be undone
 
+""" Joining
+set formatoptions+=j " Delete comment character when joining commented lines
 
 """ Wild menu
 set wildmenu
@@ -128,7 +133,7 @@ set smartcase " Only enforce case-sensitive search if a character is upper-case
 " Make Y yank to end of line (consistent with D and C)
 nnoremap Y y$
 
-" Simpler window navigation 
+" Simpler window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -147,7 +152,7 @@ nnoremap <silent> <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 set pastetoggle=<F3> " Deactivates tabbing behavior to paste reasonably
 
 " Use w!! to write to files where sudo status is needed
-cmap w!! w !sudo tee % >/dev/null 
+cmap w!! w !sudo tee % >/dev/null
 
 " Use ipdb for debugging
 " TODO: Filetype:
