@@ -66,21 +66,22 @@ call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible " Not vi compatible (affects other settings)
 
+""" Syntax
 filetype plugin indent on " 'on': Enables filetype detection
                           " 'plugin': Enables file-specific plugins
                           " 'indent': Indent files
 syntax on " Turns on syntax highlighting
 set synmaxcol=200 " Don't syntax highlight long lines (helps on large files)
+
+""" General
 set ruler " Always show current position
 set number " Turn on (absolute) line numbers
 set vb t_vb= " Flash screen in place of beeps
 set showcmd " Show command being typed
 set showmatch " Show matching brackets
-set nowrap " No line wrapping
 set autoread " Read file again if it's been changed elsewhere (but not changed in Vim)
 set splitright " Vertical splits open to the right
 set splitbelow " Horizontal splits open to the bottom
-set nojoinspaces " Only insert one space after sentences in join operations
 set exrc " Allow per-project Vim configuration (NOTE: there are security concerns here)
 set list listchars=trail:·,tab:»· " Display tab literals and trailing whitespace
 
@@ -106,6 +107,8 @@ set undoreload=10000 " Maximum lines to save for undo on a buffer reload
 set undolevels=1000 " Maximum number of changes that can be undone
 
 """ Joining
+set nowrap " No line wrapping
+set nojoinspaces " Only insert one space after sentences in join operations
 set formatoptions+=j " Delete comment character when joining commented lines
 
 """ Wild menu
