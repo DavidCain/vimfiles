@@ -408,5 +408,3 @@ let test#python#runner = 'nose'
 
 let g:test#custom_transformations = {'honor': function('HonorTransform')}
 let g:test#transformation = 'honor'
-
-let test#custom_runners = {'HonorJs': ['HonorRunner']}
