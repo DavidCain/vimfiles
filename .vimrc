@@ -16,8 +16,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }  " Live rendering when editing Markdown
 
 " Git
-Plug 'tpope/vim-fugitive'  " Interact with Git within Vim (e.g. `:Gblame` for a blame buffer)
-Plug 'tpope/vim-rhubarb'   " GitHub integration for fugitive (killer feature: `:Gbrowse` to link selected lines)
+Plug 'tpope/vim-fugitive'  " Interact with Git within Vim (e.g. `:G blame` for a blame buffer)
+Plug 'tpope/vim-rhubarb'   " GitHub integration for fugitive (killer feature: `:GBrowse` to link selected lines)
 
 " Miscellaneous TPope
 Plug 'tpope/vim-abolish'     " Convert between camelCase, snake_case, PascalCase (& lots more)
@@ -192,8 +192,7 @@ let mapleader=',' " Change the mapleader from \ to ','
 " Run an arbitrary Git command (trailing space is intentional!)
 nmap <leader>g :Git 
 " Show Git blame in the buffer, ignoring whitespace and moves
-" I'd like `--date=short` to omit the time & TZ, but Gblame lacks support
-nmap <leader>h :Gblame wM<CR>
+nmap <leader>h :Git blame -w -M --date=short<CR>
 
 " Toggle location and quickfix (Valloric/ListToggle)
 let g:lt_location_list_toggle_map = '<leader>l'
@@ -218,8 +217,8 @@ vnoremap <leader>y :Tyank<CR>
 " Fugitive
 " --------
 " Easily select link to current line (or selection), writing to copy register
-nnoremap <leader>c :.Gbrowse!<CR>
-vnoremap <leader>c :Gbrowse!<CR>
+nnoremap <leader>c :.GBrowse!<CR>
+vnoremap <leader>c :GBrowse!<CR>
 
 " Easymotion
 " ----------
@@ -334,7 +333,7 @@ nnoremap b<C-t> :call BufferToggleTest(expand('%'))<CR>:Buffers<CR>
 " OS X tweaks
 """""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd filetype crontab setlocal nobackup nowritebackup " Makes crontab work
-let g:netrw_browsex_viewer = "open"  " Enables :Gbrowse to use default browser
+let g:netrw_browsex_viewer = "open"  " Enables :GBrowse to use default browser
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
