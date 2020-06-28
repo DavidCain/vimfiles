@@ -233,6 +233,8 @@ map <Leader> <Plug>(easymotion-prefix)
 " (works best with .zshrc configuration to make fzf use ripgrep)
 " Use Ctrl-X and Ctrl-V for splits on selected files/buffers
 " ----------------------------------------------------------
+" I find the preview window to be a bit distracting, and not very performant
+let g:fzf_preview_window = ''
 " Use 'Rg' to do a `git grep` directly in a buffer
 nmap <Leader>r :Rg<CR>
 " Simple buffer switching (:buffers, but better)
