@@ -219,7 +219,8 @@ vnoremap <leader>y :Tyank<CR>
 " Easily select link to current file, writing to copy register
 nnoremap <leader>c :GBrowse!<CR>
 " Easily select link to selection, writing to copy register
-vnoremap <leader>c :GBrowse!<CR>
+" (Also populate the code into the Tmux buffer)
+vnoremap <leader>c :Tyank<CR>:'<,'>GBrowse!<CR>
 " Easily select link to current line, writing to copy register
 " (leader cc would be more idiomatic, but that imposes a delay on leader c)
 nnoremap <leader>C :.GBrowse!<CR>
