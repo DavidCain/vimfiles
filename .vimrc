@@ -202,6 +202,10 @@ let g:lt_quickfix_list_toggle_map = '<leader>q'
 nnoremap <leader>d "_d
 vnoremap <leader>D "_D
 
+" Close (and delete!) all other buffers but the current one
+command! BufOnly execute '%bdelete|edit #|normal `"'
+nmap <Leader>o :BufOnly<CR>
+
 " Quickly advance through location list
 nmap <leader>n :lnext<CR>
 nmap <leader>N :lprev<CR>
