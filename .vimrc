@@ -400,10 +400,10 @@ nmap <silent> t<C-g> :w<CR>:call ClearTmuxPane()<CR>:TestVisit<CR>
 function! HonorTransform(cmd) abort
     if a:cmd =~ '^nosetests '
         let l:cmd_sans_nosetests = "-s ".substitute(a:cmd, '^nosetests ', '', '')
-        let l:new_cmd = 'make singletest TEST_PROCESSES=0 NOSEARGS='.shellescape(l:cmd_sans_nosetests)
+        let l:new_cmd = 'make singletest NOSETEST_PROCESSES=0 NOSEARGS='.shellescape(l:cmd_sans_nosetests)
     elseif a:cmd =~ '^pipenv run pytest '
         let l:cmd_sans_nosetests = "-s ".substitute(a:cmd, '^pipenv run pytest ', '', '')
-        let l:new_cmd = 'make singletest TEST_PROCESSES=0 PYTESTARGS='.shellescape(l:cmd_sans_nosetests)
+        let l:new_cmd = 'make singletest NOSETEST_PROCESSES=0 PYTESTARGS='.shellescape(l:cmd_sans_nosetests)
     else
         let l:new_cmd = a:cmd
     endif
