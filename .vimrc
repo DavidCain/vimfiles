@@ -394,27 +394,5 @@ nmap <silent> t<C-s> :w<CR>:call ClearTmuxPane()<CR>:TestSuite<CR>
 nmap <silent> t<C-l> :w<CR>:call ClearTmuxPane()<CR>:TestLast<CR>
 nmap <silent> t<C-g> :w<CR>:call ClearTmuxPane()<CR>:TestVisit<CR>
 
-" vim-test transformation to run nose tests via `make singletest`.
-" If a command looks like "nosetests ...", transform it to
-" "make singletest NOSEARGS='...'"
-function! HonorTransform(cmd) abort
-    if a:cmd =~ '^nosetests '
-        let l:cmd_sans_nosetests = "-s ".substitute(a:cmd, '^nosetests ', '', '')
-        let l:new_cmd = 'make singletest NOSETEST_PROCESSES=0 NOSEARGS='.shellescape(l:cmd_sans_nosetests)
-    elseif a:cmd =~ '^pipenv run pytest '
-        let l:cmd_sans_nosetests = "-s ".substitute(a:cmd, '^pipenv run pytest ', '', '')
-        let l:new_cmd = 'make singletest NOSETEST_PROCESSES=0 PYTESTARGS='.shellescape(l:cmd_sans_nosetests)
-    else
-        let l:new_cmd = a:cmd
-    endif
-    return l:new_cmd
-endfunction
-
 " Put the output of running tests into a tmux pane
 let test#strategy = "vimux"
-
-" Force use of nosetest over pytest
-let test#python#runner = 'nose'
-
-let g:test#custom_transformations = {'honor': function('HonorTransform')}
-let g:test#transformation = 'honor'
