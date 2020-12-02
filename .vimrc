@@ -229,12 +229,13 @@ vnoremap <leader>y :Tyank<CR>
 
 " Fugitive
 " --------
+"
 " Easily select link to current file, writing to copy register
+" WARNING: This is a no-op unless Vim was compiled with clipboard (`:echo has('clipboard'))
+" The `vim` package on Ubuntu has no X deps. The easiest workaround is to install `vim-gtk`.
 nnoremap <leader>c :GBrowse!<CR>
-" Easily select link to selection, writing to copy register
 " (Also populate the code into the Tmux buffer)
 vnoremap <leader>c :Tyank<CR>:'<,'>GBrowse!<CR>
-" Easily select link to current line, writing to copy register
 " (leader cc would be more idiomatic, but that imposes a delay on leader c)
 nnoremap <leader>C :.GBrowse!<CR>
 
