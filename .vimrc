@@ -250,7 +250,7 @@ map <Leader> <Plug>(easymotion-prefix)
 " I find the preview window to be a bit distracting, and not very performant
 let g:fzf_preview_window = ''
 " Use 'Rg' to do a `git grep` directly in a buffer
-nmap <Leader>r :Rg<CR>
+nmap <Leader>r :FZFGitGrep<CR>
 " Simple buffer switching (:buffers, but better)
 nmap <Leader>b :Buffers<CR>
 " :e on steroids
@@ -266,6 +266,19 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
   \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
   \   <bang>0)
+
+" Use git grep + FZF to search only files tracked in the Git repository (searching from git root)
+command! -bang -nargs=* FZFGitGrep
+  \ call fzf#vim#grep(
+  \   'git grep --color=always --line-number -- '.shellescape(<q-args>), 0,
+  \   fzf#vim#with_preview(
+  \       {
+  \           'options': '--delimiter : --nth 4..',
+  \           'dir': systemlist('git rev-parse --show-toplevel')[0],
+  \       },
+  \       'right:50%:hidden', '?'
+  \   )
+  \ )
 
 """""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual Settings
