@@ -251,7 +251,8 @@ map <Leader> <Plug>(easymotion-prefix)
 " I find the preview window to be a bit distracting, and not very performant
 let g:fzf_preview_window = ''
 " Use 'Rg' to do a `git grep` directly in a buffer
-nmap <Leader>r :FZFGitGrep<CR>
+nmap <Leader>r :Rg<CR>
+nmap <leader>f :RFC<CR>
 " Simple buffer switching (:buffers, but better)
 nmap <Leader>b :Buffers<CR>
 " :e on steroids
@@ -267,6 +268,18 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
   \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
   \   <bang>0)
+
+" Custom Rg function to use ripgrep, but ignore the filename in searches
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -tpy -tjs -tts -tcss -trust -tmake -tmd -tsh -tc -tcpp %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let options = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(options, 'right:50%:hidden'), a:fullscreen)
+endfunction
+
+command! -nargs=1 -bang RF call RipgrepFzf(<q-args>, <bang>0)
+command! -nargs=0 -bang RFC call RipgrepFzf(expand("<cword>"), 0)
 
 " Use git grep + FZF to search only files tracked in the Git repository (searching from git root)
 command! -bang -nargs=* FZFGitGrep
