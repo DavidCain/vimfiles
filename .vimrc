@@ -43,9 +43,6 @@ Plug 'nanotech/jellybeans.vim'  " colorful scheme for dark backgrounds
 " Language & syntax
 Plug 'sheerun/vim-polyglot'  " sane language packs for each language
 Plug 'dense-analysis/ale'  " asynchronous linting, easy invocation of autoformatters/fixers (Black, isort, Prettier, others)
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'which yarn && yarn install',
-  \ 'for': ['javascript', 'typescript', 'vue', 'tsx', 'css', 'less', 'scss', 'json', 'markdown', 'html'] }
 
 " Testing
 Plug 'vim-test/vim-test'  " Run unit tests in a file, class, or method. Pairs great with vimux.
