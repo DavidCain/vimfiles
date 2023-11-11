@@ -134,6 +134,11 @@ nnoremap # :call feedkeys("?\\C\\<" . expand("<cword>") . "\\>\r")<CR>
 " Remappings
 """""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Simple shortcuts to make a Markdown heading level 1 or 2
+" (Uses the underlining syntax, since `#` is a comment in Git commits)
+nnoremap g1 yypVr=
+nnoremap g2 yypVr-
+
 " Make Y yank to end of line (consistent with D and C)
 nnoremap Y y$
 
