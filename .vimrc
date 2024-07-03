@@ -166,8 +166,8 @@ cmap w!! w !sudo tee % >/dev/null
 " Use ipdb for debugging
 " TODO: Filetype:
 " - JS: debugger
-:map <F10> o__import__('ipdb').sset_trace()<CR><Esc>
-imap <F10> __import__('ipdb').sset_trace()<Esc>
+:map <F10> o__import__('pdb').set_trace()<CR><Esc>
+imap <F10> __import__('pdb').set_trace()<Esc>
 
 " Append time and date, in ISO 8601 format
 :map <F12> a<C-R>=strftime("%Y-%m-%d")<CR><Esc>
