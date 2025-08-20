@@ -398,7 +398,7 @@ let g:prettier#exec_cmd_async = 1
 
 " ALE
 " ---
-let g:ale_fixers = {'python': ['isort'], 'rust': ['rustfmt']}
+let g:ale_fixers = {'python': ['ruff', 'ruff_format'], 'rust': ['rustfmt']}
 let g:ale_fix_on_save = 1 " Automatically run all fixers on save
 let g:ale_linters = {'python': ['pylint']}
 let g:ale_lint_on_text_changed = "normal" " Don't lint while still in insert mode
